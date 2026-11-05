@@ -88,20 +88,6 @@ def main():
         "<head>",
         '<head>\n\t\t<script src="coi-serviceworker.js"></script>', 1)
 
-    # Color-grade compensation. The desktop game renders with Forward+ and its
-    # Environment adjustments (brightness 1.49, contrast 0.8, saturation 0.26
-    # in the club scene); the 4.1 Compatibility renderer used on web never
-    # applies Environment adjustments (USE_BCS is never defined), so the raw
-    # output is brighter and flatter. This CSS filter was fitted numerically
-    # against a desktop capture of the same scene (tools/calibrate_filter.py).
-    # Tweak those three numbers to retune the look.
-    assert "#canvas {" in html
-    html = html.replace(
-        "#canvas {",
-        "#canvas {\n"
-        "\tfilter: brightness(0.66) contrast(1.5) saturate(0.65);\n"
-        "\t-webkit-filter: brightness(0.66) contrast(1.5) saturate(0.65);", 1)
-
     # Chunked main-pack loader (GitHub Pages rejects files > 100 MB).
     # ($GODOT_URL has already been substituted with "godot.js" above.)
     assert '<script src="godot.js"></script>' in html
