@@ -1,0 +1,16 @@
+# Proprietary game content - never commit
+game_data/
+build/
+template/
+entries.json
+manifest.json
+project_settings.txt
+
+# Local artifacts
+diag/
+certs/
+__pycache__/
+*.pyc
+
+# Intermediate (rebuildable) web artifacts
+web/godot.pck
