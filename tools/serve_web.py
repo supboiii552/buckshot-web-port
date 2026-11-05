@@ -19,7 +19,7 @@ import sys
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 8124
 USE_HTTPS = "--https" in sys.argv
 ROOT = os.path.dirname(os.path.abspath(__file__))
-WEB = os.path.join(ROOT, "..", "web")
+WEB = os.path.join(ROOT, "..", "docs")
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):

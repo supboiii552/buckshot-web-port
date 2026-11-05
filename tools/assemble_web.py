@@ -11,7 +11,7 @@ import zipfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 WEBPORT = os.path.abspath(os.path.join(ROOT, ".."))
-WEB = os.path.join(WEBPORT, "web")
+WEB = os.path.join(WEBPORT, "docs")  # docs/ = GitHub Pages "deploy from branch" folder
 TEMPLATE_DIR = os.path.join(WEBPORT, "template")
 TEMPLATE_ZIP = os.path.join(
     os.environ["APPDATA"], "Godot", "export_templates", "4.1.4.stable", "web_release.zip")

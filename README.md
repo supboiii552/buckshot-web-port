@@ -29,11 +29,12 @@ affiliated with or endorsed by Mike Klubnika / Critical Reflex.
   differences.
 - First load downloads ~443 MB (split into 5 chunks because GitHub rejects
   files > 100 MB; reassembled in the browser before boot).
+- The MULTIPLAYER menu button leads to a dead end on web (Steam-only feature).
 
 ## Repo layout
 
 ```
-web/          deployable site (everything GitHub Pages needs)
+docs/         deployable site (everything GitHub Pages needs)
 tools/        build + serve pipeline (Python 3, needs Pillow + numpy)
 game_data/    extracted original PCK (not committed — proprietary game data)
 build/        intermediate build trees (not committed)
@@ -47,9 +48,9 @@ certs/        self-signed TLS cert for LAN HTTPS (never commit private keys)
 python tools/shrink_textures.py --src game_data --out build/assets   # resize + WebGL2 fixes
 python tools/reencode_audio.py                                       # smaller audio
 python tools/build_full.py       # full resource tree + Steam stub + autoload patch
-python tools/build_pack.py       # -> web/godot.pck
-python tools/assemble_web.py     # -> web/index.html (injects controls + loader)
-python tools/split_pck.py        # -> web/pck/*.partNN (Pages-ready)
+python tools/build_pack.py       # -> docs/godot.pck
+python tools/assemble_web.py     # -> docs/index.html (injects controls + loader)
+python tools/split_pck.py        # -> docs/pck/*.partNN (Pages-ready)
 ```
 
 Texture notes (why `shrink_textures.py` exists):
@@ -71,12 +72,27 @@ python tools/serve_web.py 8124 --https    # iPad on LAN: https://<pc-ip>:8124/
 requires a secure context before it grants SharedArrayBuffer, which the
 threaded Godot runtime needs.
 
-## Publish to GitHub Pages
+## Publish to GitHub Pages (no CI needed)
 
 1. Push this folder to a GitHub repository (respecting the `.gitignore`).
-2. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. The included workflow (`.github/workflows/deploy_pages.yml`) deploys `web/`
-   on every push to `main`.
-4. Open `https://<user>.github.io/<repo>/`. On the first visit the
+2. Repo **Settings → Pages → Build and deployment**:
+   - **Source: Deploy from a branch**
+   - **Branch: main**, **Folder: /docs**
+3. Open `https://<user>.github.io/<repo>/`. On the first visit the
    COOP/COEP service worker registers and the page reloads once — that is
-   expected. Then the pack loads (~443 MB) and the game boots.
+   expected. Then the pack chunks download (~443 MB total) and the game boots.
+
+Keep the tab open and the screen awake while it loads; on iOS a backgrounded
+tab suspends the download.
+
+## iPad notes
+
+- Works over the HTTPS Pages URL (secure context → SharedArrayBuffer
+  available). Serve locally to the iPad with `--https` if not using Pages.
+- Touch acts as the mouse; the on-screen **ESC** button replaces the Escape
+  key (skip intro, close dialogs), the second button toggles fullscreen, and
+  the small round button hides/shows both.
+- Needs a reasonably modern iPad (A12 or newer recommended): the whole pack
+  lives in browser memory, so low-memory devices may crash during load. If
+  the game runs but stutters, report back and render resolution can be
+  capped as a next step.

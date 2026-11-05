@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Split web/godot.pck into <100 MB parts for GitHub Pages.
+"""Split docs/godot.pck into <100 MB parts for GitHub Pages.
 
 GitHub hard-rejects files larger than 100 MiB at push time, and GitHub Pages
 serves files from the repository tree - so the multi-hundred-MB pack cannot be
-hosted as one file. This writes web/pck/godot.pck.partNN + manifest.json,
-which web/pck_loader.js assembles into a Blob in the browser.
+hosted as one file. This writes docs/pck/godot.pck.partNN + manifest.json,
+which docs/pck_loader.js assembles into a Blob in the browser.
 
 Run order:  build_pack.py -> assemble_web.py -> split_pck.py
-(split_pck removes web/godot.pck afterwards; re-running the two build scripts
+(split_pck removes docs/godot.pck afterwards; re-running the two build scripts
 recreates it.)
 """
 import json
@@ -18,7 +18,7 @@ CHUNK = 90_000_000  # safely under GitHub's 100 MiB hard limit
 
 
 def main():
-    web = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "web")
+    web = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs")
     src = os.path.join(web, "godot.pck")
     if not os.path.exists(src):
         print("godot.pck not found - build it first with build_pack.py")

@@ -13,4 +13,4 @@ __pycache__/
 *.pyc
 
 # Intermediate (rebuildable) web artifacts
-web/godot.pck
+docs/godot.pck
