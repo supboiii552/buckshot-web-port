@@ -43,7 +43,7 @@ FMT_ETC2_RGBA8 = 31
 FMT_ETC2_RG11 = 28
 
 KEEP_SIZE = ("release form",)
-CAP = 512
+CAP = 384
 
 
 def dds_header(w, h, fourcc):

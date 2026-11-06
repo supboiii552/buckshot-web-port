@@ -3,10 +3,12 @@
 
 	// Buckshot Roulette web port - main pack loader.
 	//
-	// Two packs ship side by side because GPU compressed-texture support
+	// Three packs ship side by side because GPU compressed-texture support
 	// differs:
 	//   pck/       - S3TC (BC1/BC3) textures - desktop browsers
-	//   pck-etc2/  - ETC2/EAC textures      - everyone else (Apple GPUs etc.)
+	//   pck-etc2/  - ETC2/EAC textures      - Apple GPUs etc. (mobile)
+	//   pck-rgba/  - uncompressed RGBA8/RGB8/RG8 - anything that can't
+	//                upload compressed textures at all
 	//
 	// The choice matters because Godot 4.1.4's GLES3 backend gates compressed
 	// uploads on GL extension names: S3TC only via WEBGL_compressed_texture_s3tc
@@ -61,10 +63,15 @@
 		0x06, 0x11, 0x24, 0x90, 0x00, 0x92, 0x4b, 0x6d,
 		0x06, 0x11, 0x22, 0x52, 0x25, 0x22, 0x52, 0x25]);
 
+	function etc2Works() {
+		return uploadTest(0x9274, ETC2_RGB8_BLOCK, 4, 4) &&
+			uploadTest(0x9272, EAC_RG11_BLOCK, 4, 4);
+	}
+
 	function pickPackDir() {
 		var override = new URLSearchParams(window.location.search).get('pack');
-		if (override === 'etc2' || override === 's3tc') {
-			return override === 'etc2' ? 'pck-etc2' : 'pck';
+		if (override === 'etc2' || override === 's3tc' || override === 'rgba') {
+			return override === 'etc2' ? 'pck-etc2' : (override === 'rgba' ? 'pck-rgba' : 'pck');
 		}
 		try {
 			var gl = gl2();
@@ -73,7 +80,10 @@
 				return 'pck'; // desktop GPUs: BC1/BC3 in hardware
 			}
 		} catch (e) { /* fall through */ }
-		return 'pck-etc2'; // Apple/mobile GPUs: ETC2 (Safari iOS 13.4+)
+		// Mobile/other: ETC2 if this browser actually accepts the uploads
+		// (Safari iOS 13.4+), otherwise uncompressed RGBA8 - which renders
+		// on every WebGL2 device, no extension required.
+		return etc2Works() ? 'pck-etc2' : 'pck-rgba';
 	}
 
 	function showBadge(text) {
@@ -91,9 +101,19 @@
 	window.loadPckChunks = function (onProgress) {
 		var dir = pickPackDir();
 		var cacheName = 'br-pck-' + dir;
-		var test = (dir === 'pck-etc2')
-			? uploadTest(0x9274, ETC2_RGB8_BLOCK, 4, 4) && uploadTest(0x9272, EAC_RG11_BLOCK, 4, 4)
-			: true;
+		var test = true;
+		if (dir === 'pck-etc2') {
+			test = etc2Works();
+			if (!test) {
+				// The upload probe rejected ETC2: do not ship a pack this
+				// browser cannot render. Uncompressed RGBA8 needs no
+				// extension and renders everywhere WebGL2 does.
+				console.warn('ETC2 upload test failed - falling back to pck-rgba');
+				dir = 'pck-rgba';
+				cacheName = 'br-pck-' + dir;
+				test = true; // rgba uploads are plain formats, no probe needed
+			}
+		}
 		showBadge('pack: ' + dir + ' | ' + (test ? 'upload ok' : 'upload FAILED'));
 		if (!test) {
 			console.error('Compressed texture upload test failed for ' + dir +
