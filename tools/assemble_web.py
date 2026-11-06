@@ -95,13 +95,15 @@ def main():
         '<script src="godot.js"></script>',
         '<script src="godot.js"></script>\n\t\t<script src="pck_loader.js"></script>', 1)
 
-    # Defer engine start until the pack chunks are assembled into a Blob URL.
+    # Defer engine start until the pack is assembled in JS. The loader returns
+    # either the pack bytes (ArrayBuffer) or a fallback path string; the bytes
+    # go straight into preloadFile (no blob-URL fetch round-trip).
     assert "\t\tengine.startGame({" in html
     html = html.replace(
         "\t\tengine.startGame({",
         "\t\t(async () => {\n"
         "\t\t\ttry {\n"
-        "\t\t\t\tGODOT_CONFIG['pckUrl'] = await window.loadPckChunks(function (done, total) {\n"
+        "\t\t\t\tGODOT_CONFIG['pckData'] = await window.loadPckChunks(function (done, total) {\n"
         "\t\t\t\t\tif (total > 0) {\n"
         "\t\t\t\t\t\tstatusProgressInner.style.width = `${(done / total) * 100}%`;\n"
         "\t\t\t\t\t\tsetStatusMode('progress');\n"
@@ -111,12 +113,23 @@ def main():
         "\t\t\t\tdisplayFailureNotice(err);\n"
         "\t\t\t\treturn;\n"
         "\t\t\t}\n"
-        "\t\t\tengine.startGame({\n"
-        "\t\t\t\tmainPack: GODOT_CONFIG['pckUrl'],", 1)
-    assert "\t\t}, displayFailureNotice);\n\t}\n}());" in html
+        "\t\t\tconst startOpts = {\n"
+        "\t\t\t\t'args': ['--main-pack', 'godot.pck'],", 1)
+    assert "\t\t}).then(() => {\n\t\t\tsetStatusMode('hidden');\n\t\t\tinitializing = false;\n\t\t}, displayFailureNotice);\n\t}\n}());" in html
     html = html.replace(
-        "\t\t}, displayFailureNotice);\n\t}\n}());",
-        "\t\t}, displayFailureNotice);\n\t\t})();\n\t}\n}());", 1)
+        "\t\t}).then(() => {\n\t\t\tsetStatusMode('hidden');\n\t\t\tinitializing = false;\n\t\t}, displayFailureNotice);\n\t}\n}());",
+        "\t\t};\n"
+        "\t\tconst pckData = GODOT_CONFIG['pckData'];\n"
+        "\t\tconst boot = (typeof pckData === 'string')\n"
+        "\t\t\t? engine.startGame(Object.assign({ 'mainPack': pckData }, startOpts))\n"
+        "\t\t\t: engine.init(GODOT_CONFIG['executable'])\n"
+        "\t\t\t\t.then(function () { return engine.preloadFile(pckData, 'godot.pck'); })\n"
+        "\t\t\t\t.then(function () { return engine.start(startOpts); });\n"
+        "\t\tboot.then(() => {\n"
+        "\t\t\tsetStatusMode('hidden');\n"
+        "\t\t\tinitializing = false;\n"
+        "\t\t}, displayFailureNotice);\n"
+        "\t\t})();\n\t}\n}());", 1)
 
     # Toggleable on-screen touch controls (Escape / Fullscreen; no joystick).
     assert "</body>" in html

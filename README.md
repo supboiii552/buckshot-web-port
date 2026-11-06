@@ -23,12 +23,21 @@ affiliated with or endorsed by Mike Klubnika / Critical Reflex.
 ## Known limitations
 
 - Steam features are stubbed (`web` build has no Steamworks): multiplayer,
-  achievements, leaderboards and friends are inactive.
+  achievements, leaderboards and friends are inactive. MP-only audio and MP
+  scenes are removed from the pack entirely; MP textures stay because
+  single-player objects (shells, blood, items) reuse them.
 - The web runtime uses Godot's Compatibility (WebGL2) renderer, while the
   desktop game uses Forward+ (Vulkan) — expect minor lighting/shading
   differences.
-- First load downloads ~443 MB (split into 5 chunks because GitHub rejects
-  files > 100 MB; reassembled in the browser before boot).
+- Two packs ship because GPU texture support differs: `docs/pck/` (S3TC/BC
+  textures) for desktop browsers and `docs/pck-astc/` (ASTC textures) for
+  Apple/mobile browsers — Apple GPUs cannot decode S3TC at all, which is why
+  textures were black on iPad. The loader picks by probing WebGL2 extensions
+  (`?pack=astc|s3tc` overrides).
+- First visit downloads ~360–375 MB (packs are split into <100 MB chunks for
+  GitHub and reassembled in the browser) and then caches the chunks in the
+  browser: every later visit boots from local cache with no re-download. A
+  rebuilt pack auto-invalidates the cache.
 - The MULTIPLAYER menu button leads to a dead end on web (Steam-only feature).
 
 ## Repo layout
@@ -59,6 +68,11 @@ the original pack has 253 such textures, which upload fine on desktop OpenGL
 but fail silently in browsers (untextured/black objects). The tool also
 preserves BC1a (DXT1 1-bit alpha) cutouts and keeps player-read documents
 (the waiver) at full resolution.
+
+The mobile texture set is built with `tools/make_astc.py`, which needs ARM's
+astcenc: download the Windows x64 release from
+https://github.com/ARM-software/astc-encoder/releases and unpack it to
+`tools/astcenc/` (expects `bin/astcenc-avx2.exe`).
 
 ## Run locally
 

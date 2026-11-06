@@ -507,9 +507,16 @@ def rscc_decompress(blob):
 
 
 def rscc_compress(payload, block_size=4096, cmode=CMODE_ZSTD):
-    """Wrap a resource in Godot's FileAccessCompressed container."""
+    """Wrap a resource in Godot's FileAccessCompressed container.
+
+    Godot's compressed binary resources contain the resource body WITHOUT the
+    leading 'RSRC' magic (the wrapper replaces it - the loader reads the
+    header fields directly after unwrapping). The magic is stripped here.
+    """
     import zlib
 
+    if payload[:4] == b"RSRC":
+        payload = payload[4:]
     total = len(payload)
     block_count = total // block_size + 1
     blocks = []

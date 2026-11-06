@@ -11,6 +11,9 @@ diag/
 certs/
 __pycache__/
 *.pyc
+tools/astcenc/
+tools/*.zip
+tools/*.bak
 
 # Intermediate (rebuildable) web artifacts
 docs/godot.pck

@@ -137,7 +137,7 @@ body {
 		<script src="godot.js"></script>
 		<script src="pck_loader.js"></script>
 		<script>
-const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 2, "executable": "godot", "mainPack": "godot.pck", "experimentalVFS": false, "focusCanvas": true, "fileSizes": {"godot.wasm": 28032872, "godot.pck": 442863483}};
+const GODOT_CONFIG = {"args": [], "canvasResizePolicy": 2, "executable": "godot", "mainPack": "godot.pck", "experimentalVFS": false, "focusCanvas": true, "fileSizes": {"godot.wasm": 28032872, "godot.pck": 326678011}};
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
@@ -223,7 +223,7 @@ const engine = new Engine(GODOT_CONFIG);
 		setStatusMode('indeterminate');
 		(async () => {
 			try {
-				GODOT_CONFIG['pckUrl'] = await window.loadPckChunks(function (done, total) {
+				GODOT_CONFIG['pckData'] = await window.loadPckChunks(function (done, total) {
 					if (total > 0) {
 						statusProgressInner.style.width = `${(done / total) * 100}%`;
 						setStatusMode('progress');
@@ -233,8 +233,8 @@ const engine = new Engine(GODOT_CONFIG);
 				displayFailureNotice(err);
 				return;
 			}
-			engine.startGame({
-				mainPack: GODOT_CONFIG['pckUrl'],
+			const startOpts = {
+				'args': ['--main-pack', 'godot.pck'],
 			'onProgress': function (current, total) {
 				if (total > 0) {
 					statusProgressInner.style.width = `${(current / total) * 100}%`;
@@ -249,7 +249,14 @@ const engine = new Engine(GODOT_CONFIG);
 					setStatusMode('indeterminate');
 				}
 			},
-		}).then(() => {
+		};
+		const pckData = GODOT_CONFIG['pckData'];
+		const boot = (typeof pckData === 'string')
+			? engine.startGame(Object.assign({ 'mainPack': pckData }, startOpts))
+			: engine.init(GODOT_CONFIG['executable'])
+				.then(function () { return engine.preloadFile(pckData, 'godot.pck'); })
+				.then(function () { return engine.start(startOpts); });
+		boot.then(() => {
 			setStatusMode('hidden');
 			initializing = false;
 		}, displayFailureNotice);

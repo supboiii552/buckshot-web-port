@@ -33,29 +33,41 @@ def pack_md5(paths):
 
 def write_manifest(outdir, parts, total):
     version = pack_md5([os.path.join(outdir, os.path.basename(p)) for p in parts])
+    sizes = [os.path.getsize(os.path.join(outdir, os.path.basename(p))) for p in parts]
     with open(os.path.join(outdir, "manifest.json"), "w") as f:
-        json.dump({"parts": parts, "size": total, "version": version}, f)
+        json.dump({"parts": parts, "partSizes": sizes, "size": total,
+                   "version": version}, f)
     print(f"manifest version: {version}")
 
 
 def main():
     web = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs")
-    src = os.path.join(web, "godot.pck")
-    outdir = os.path.join(web, "pck")
+    argv = sys.argv[1:]
+    src = None
+    packdir = "pck"
+    i = 0
+    while i < len(argv):
+        if argv[i] == "--from":
+            src = argv[i + 1]; i += 2; continue
+        if argv[i] == "--dir":
+            packdir = argv[i + 1]; i += 2; continue
+        i += 1
+    outdir = os.path.join(web, packdir)
 
-    if "--manifest-only" in sys.argv:
+    if "--manifest-only" in argv:
         if not os.path.isdir(outdir):
-            print("no pck/ directory")
+            print("no pack directory:", outdir)
             return 1
         parts = sorted(
-            f"pck/{f}" for f in os.listdir(outdir) if f.startswith("godot.pck.part"))
+            f"{packdir}/{f}" for f in os.listdir(outdir) if f.startswith("godot.pck.part"))
         total = sum(os.path.getsize(os.path.join(outdir, os.path.basename(p))) for p in parts)
         write_manifest(outdir, parts, total)
         print(f"{len(parts)} existing parts, {total / 1e6:.1f} MB -> manifest refreshed")
         return 0
 
-    if not os.path.exists(src):
-        print("godot.pck not found - build it first with build_pack.py")
+    if not src or not os.path.exists(src):
+        print("usage: split_pck.py --from <godot.pck> --dir pck [--keep]")
+        print("       split_pck.py --dir pck --manifest-only")
         return 1
     os.makedirs(outdir, exist_ok=True)
     for f in os.listdir(outdir):
@@ -72,15 +84,14 @@ def main():
             name = f"godot.pck.part{i:02d}"
             with open(os.path.join(outdir, name), "wb") as o:
                 o.write(data)
-            parts.append(f"pck/{name}")
+            parts.append(f"{packdir}/{name}")
             print(f"  {name}: {len(data) / 1e6:.1f} MB")
             i += 1
     write_manifest(outdir, parts, total)
-    print(f"{len(parts)} parts, {total / 1e6:.1f} MB total -> docs/pck/")
+    print(f"{len(parts)} parts, {total / 1e6:.1f} MB total -> docs/{packdir}/")
 
-    if "--keep" not in sys.argv:
+    if "--keep" not in argv:
         os.remove(src)
-        print("removed docs/godot.pck (rebuild: build_pack.py, assemble_web.py, split_pck.py)")
     return 0
 
 
