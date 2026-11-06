@@ -1,0 +1,498 @@
+.godot/imported/adrenalline without pointers1_brass albedo1.png-bbf8389b7b262534c9aca68d6475d664.s3tc.ctex
+.godot/imported/adrenalline without pointers1_syringe test2.png-168e0bb207c7c3000c176981758aa960.s3tc.ctex
+.godot/imported/adrenalline without pointers1_valve thing.png-473c1d38a0342c89f1e994fec5867357.s3tc.ctex
+.godot/imported/airplane1_concrete plane1.png-4d05b3a283e807f3a95135ec56562bce.s3tc.ctex
+.godot/imported/backroom blockout4_5145UYCSGoL.png-17cb7d2854f8d2cc1e0f0f514f8b115a.s3tc.ctex
+.godot/imported/backroom blockout4_boombox.png-40a2081f307022f03cf18f97a20138f2.s3tc.ctex
+.godot/imported/backroom blockout4_cigarette.png-8192ae2ed0a3603145555633c6eaed63.s3tc.ctex
+.godot/imported/backroom blockout4_dirt.png-051d98ff8410f284e4e556792a49cff7.s3tc.ctex
+.godot/imported/backroom blockout4_document1.png-bf38a9ad7a16edfe9a41fb0fd1ed28e5.s3tc.ctex
+.godot/imported/backroom blockout4_fire extinguisher label.png-863b68192435d3430343a926cad53fab.s3tc.ctex
+.godot/imported/backroom blockout4_fixture.png-938bcb5eb89d9add4585a55b74e998b7.s3tc.ctex
+.godot/imported/backroom blockout4_magazine1.png-01d9b1bbfb34b500312426fac89eb02a.s3tc.ctex
+.godot/imported/backroom blockout4_magazine2.png-70427016dcda745aec32eb3863a9cc51.s3tc.ctex
+.godot/imported/backroom blockout4_paper normal map_25.png-d27391a560aca4e8117ebfa151e5359a.s3tc.ctex
+.godot/imported/backroom blockout4_paperwork1.png-8066308ca5d2b9eed8ece979d53439c5.s3tc.ctex
+.godot/imported/backroom blockout4_paperwork1_with coffee leak.png-c5dc09c2c567e992db0fee0d56eb75b1.s3tc.ctex
+.godot/imported/backroom blockout4_paperwork2.png-e892f173928ab0ed472638e97cf2d7c0.s3tc.ctex
+.godot/imported/backroom blockout4_paperwork3.png-74c8580cf82fe96f931146a059e3fe1d.s3tc.ctex
+.godot/imported/backroom blockout4_paperwork4.png-7cf1804ded34bbb4623f765c491a738e.s3tc.ctex
+.godot/imported/backroom blockout4_TCom_AudioEquipment0039_1_M.png-fd528dd309416b5c7f7a78519dd0579e.s3tc.ctex
+.godot/imported/backroom blockout4_TCom_AudioEquipment0068_S.png-9d004689b10cb3137e39a12ff803add0.s3tc.ctex
+.godot/imported/backroom blockout4_TCom_WoodPlanksFloors0026_1_seamless_S.png-863eea01bd6150cc810c5edaeed0783f.s3tc.ctex
+.godot/imported/backroom blockout6_5145UYCSGoL.png-fc70791a005e94f9c0d071e2b348bbc9.s3tc.ctex
+.godot/imported/backroom blockout6_boombox.png-24f3bdc2a21101c13ac7054c23ceda8c.s3tc.ctex
+.godot/imported/backroom blockout6_cigarette.png-486c6ed55820175f1b121abea0d98cb0.s3tc.ctex
+.godot/imported/backroom blockout6_circuitboards.png-19664d5ef58b710bff7e526de049216a.s3tc.ctex
+.godot/imported/backroom blockout6_dirt.png-cf42470195f8ee1d77d0039f8ac8276c.s3tc.ctex
+.godot/imported/backroom blockout6_document1.png-ec39089023d847f7d6b38cf4b53666a2.s3tc.ctex
+.godot/imported/backroom blockout6_edfited.png-a2d6e2378c50158f7d7bb62f6895d3f6.s3tc.ctex
+.godot/imported/backroom blockout6_fire extinguisher label.png-0aeee9508a73d28d8d75a29802ead9a4.s3tc.ctex
+.godot/imported/backroom blockout6_fixture.png-ae8ced4da402ac882b48a53610e01ad9.s3tc.ctex
+.godot/imported/backroom blockout6_magazine1.png-0c4f3701f30c4257cf7586ba09d81c61.s3tc.ctex
+.godot/imported/backroom blockout6_magazine2.png-32f89a2d63668b0968a75ede277357e7.s3tc.ctex
+.godot/imported/backroom blockout6_paper normal map_33.png-cd0f3b33aae0662c23c132e22e0492d0.s3tc.ctex
+.godot/imported/backroom blockout6_paperwork1.png-22904f9d2ef842c2292b3abdf2c35404.s3tc.ctex
+.godot/imported/backroom blockout6_paperwork1_with coffee leak.png-f1e4dbb54973f54633f7eba0ff5b4986.s3tc.ctex
+.godot/imported/backroom blockout6_paperwork2.png-6f1f1833e500d20194b494bfdca13940.s3tc.ctex
+.godot/imported/backroom blockout6_paperwork3.png-10da1e9c6fb4562e6660ebeccfa1d552.s3tc.ctex
+.godot/imported/backroom blockout6_paperwork4.png-6e3fce8fb559f95a1b8bc5120b2875b1.s3tc.ctex
+.godot/imported/backroom blockout6_tabletop felt normal.png-6d641482cf4cb4b57f4d26b779667fbc.s3tc.ctex
+.godot/imported/backroom blockout6_tabletop felt shell compartment.png-912b7fd0475a3da2e0a7b76b11fe211c.s3tc.ctex
+.godot/imported/backroom blockout6_tabletop felt shotgun radius compartment2.png-2e72a235612cd6025361fe53bf58117b.s3tc.ctex
+.godot/imported/backroom blockout6_tabletop felt shotgun radius with lines greyed out.png-d00a06f5e4d4f0425d2e75e810185917.s3tc.ctex
+.godot/imported/backroom blockout6_tabletop felt_without lines.png-94928a36bb4374347eb805107482be86.s3tc.ctex
+.godot/imported/backroom blockout6_TCom_AudioEquipment0039_1_M.png-9cea38e3f2000b5645d59d3318f2f768.s3tc.ctex
+.godot/imported/backroom blockout6_TCom_AudioEquipment0068_S.png-def9bb8ddb746e376498fe7099afaad3.s3tc.ctex
+.godot/imported/backroom blockout6_TCom_WoodPlanksFloors0026_1_seamless_S.png-7012e46b88b0f841b93f4726f4e564d9.s3tc.ctex
+.godot/imported/bird copy1_angel base.png-ed4390095ba2453a23af3cd090a32a02.s3tc.ctex
+.godot/imported/bird4_angel base.png-bb9774427448d1b8007b26f83f8eab17.s3tc.ctex
+.godot/imported/birthday hat1_birthday.png-94f9c911587d43b29c74284cfbd7a127.s3tc.ctex
+.godot/imported/bracket selection_briefcase intake1.png-a0b63815d27a18aeaaa3a1d096260ee0.s3tc.ctex
+.godot/imported/bracket selection_square1.png-6dbd7d9fc42764494aee5247ab567440.s3tc.ctex
+.godot/imported/bracket selection_square2 inverted.png-452b020715304fd4fed7bd2ce512913c.s3tc.ctex
+.godot/imported/bracket selection_square2.png-9bdf63bebd4b3a24e715576a3e3b78c6.s3tc.ctex
+.godot/imported/bracket selection_square3.png-0a2e8e8a58ea0e22fbb678b3288fe545.s3tc.ctex
+.godot/imported/briefcase machine1_briefcase machine tex.png-3f39d6d18b1f65800a74edee229d7e23.s3tc.ctex
+.godot/imported/briefcase machine1_money4.png-a192b414f55435a833be5619fe2ab0bf.s3tc.ctex
+.godot/imported/cake2_candle png.png-fd48e7e9f3a06d1002edfb9578c47ca0.s3tc.ctex
+.godot/imported/cake2_soil-none-5i4x9p.png-129147b3715cb189fc756df53493009f.s3tc.ctex
+.godot/imported/chimney backdrop1.png-de77eda090f9b44140cac6c92e6cf9d4.s3tc.ctex
+.godot/imported/chimney1_chimney base1.png-082c374b6a8b40f55a5105d8e62bb16f.s3tc.ctex
+.godot/imported/concrete plane1_overlay1.png-ad4c63e56b0103043cde6f63be0d9f6e.s3tc.ctex
+.godot/imported/crt buttons3_window.png-0f99bff660381a46217617772e8fbe78.s3tc.ctex
+.godot/imported/crt icon_friends inactive.png-8d5049f70311495386e9b73a7e835af3.s3tc.ctex
+.godot/imported/crt icon_friends.png-49cb339b6015de34e085914ac93e493d.s3tc.ctex
+.godot/imported/crt icon_global overview.png-d1297937fd978e40d8c57bad4d369b6e.s3tc.ctex
+.godot/imported/crt icon_line.png-56e4b557562ba5cf49d78a86aa173baf.s3tc.ctex
+.godot/imported/crt icon_player stats inactive.png-ff33c17c644bf1bd38f3d1b844c14c67.s3tc.ctex
+.godot/imported/crt icon_player stats.png-a8a70dcc180229ceafcd5af32ce6faa5.s3tc.ctex
+.godot/imported/crt icon_top leaderboard.png-c8320bf0880c4f757c4f98111578a3ea.s3tc.ctex
+.godot/imported/crt main1_bvm_front edited2.png-cde316578c6f438658b6d2a261249f85.s3tc.ctex
+.godot/imported/crt main1_bvm_side edited bw desat.png-f4f1dbaa7aa7a031d29329d64c1bcb02.s3tc.ctex
+.godot/imported/crt main1_bvm_side edited bw desat1.png-1bed7b89c72fa30f3b87dd25a19b40ab.s3tc.ctex
+.godot/imported/crt main1_crt buttons2.png-b36b99f57936a0268af52f26c6e8026f.s3tc.ctex
+.godot/imported/crt main1_meat.png-c6a9ace9dd4794dc4cad4dca3994eec5.s3tc.ctex
+.godot/imported/crt main1_TCom_Grungemaps0164_1_S.png-76f5fd01d32453a717ab572b5e3f541b.s3tc.ctex
+.godot/imported/crt main1_tiles broken 1024 albedo.png-e91836fc3854a0ca9bf299c4db44f518.s3tc.ctex
+.godot/imported/crt main1_tiles broken 1024 nromal.png-876fc01f62745c71ffff79d886e60425.s3tc.ctex
+.godot/imported/crt main1_tiles normal 2048.png-9088fb6de758b98c2e1e54c0697f06e7.s3tc.ctex
+.godot/imported/crt main1_tilies normal 2048 normal map.png-df5bdf0a77d4087ec968eb5377c61f1b.s3tc.ctex
+.godot/imported/crt sa1_bvm_front edited2.png-01ce05868ec7e8208e977b8854c4a445.s3tc.ctex
+.godot/imported/crt sa1_bvm_side edited bw desat.png-143ea31b07963d649a2611ba1b8ad2ff.s3tc.ctex
+.godot/imported/crt sa1_bvm_side edited bw desat1.png-93274aac9d125ae7c5c2f6cddfc6e05b.s3tc.ctex
+.godot/imported/crt sa1_meat.png-2a36b1ae600a01eb0985f3b0a890b824.s3tc.ctex
+.godot/imported/crt sa1_TCom_Grungemaps0164_1_S.png-9cc86bd7136b55ed2fc78f3ea9a2a86e.s3tc.ctex
+.godot/imported/dealer flow1_burner phone2.png-4e7c9a134f799dd3a994a90800d870ce.s3tc.ctex
+.godot/imported/dealer flow1_burner phone2.png-b0c2ee7ea8bc1d3549aefaa4917afbcf.s3tc.ctex
+.godot/imported/dealer flow1_copy1.png-57979fd3fd7d67f0b3b82319cb0dc9df.s3tc.ctex
+.godot/imported/dealer flow1_copy1.png-6b5c74098c85b98cae73c9aa04a8355a.s3tc.ctex
+.godot/imported/dealer flow1_skin base copy.png-7b7b539a6965d5d9d080575482f9ebc9.s3tc.ctex
+.godot/imported/dealer flow1_skin base copy.png-d6c5b1b0115153342fa464a808c4fff8.s3tc.ctex
+.godot/imported/dealer hands main1_beer can brighter metal.png-6b788f19ce88b8854c663aabef0bd50b.s3tc.ctex
+.godot/imported/dealer hands main1_beer can2 no text.png-276839c8e0ac55f395d5faa817cc7a6e.s3tc.ctex
+.godot/imported/dealer hands main1_cig box front 2.png-8c7c5e7a7ae53991d17a052d70d5e55e.s3tc.ctex
+.godot/imported/dealer hands main1_cig box side2.png-3ba3b451d01a063d1cc0eed82c75648f.s3tc.ctex
+.godot/imported/dealer hands main1_magnifying glass.png-6222d6b68ab3936030fd438ccf8d9ae3.s3tc.ctex
+.godot/imported/dealer hands main1_skin base hand_left.png-4c2049590cd814f78fc8b12592251ed5.s3tc.ctex
+.godot/imported/dealer hands on table1_skin base hand_left.png-bed60b11bd2d9f34e264a6d8f2ed6e16.s3tc.ctex
+.godot/imported/dealer hands_adrenaline1_brass albedo1.png-6292404ad7b828c4c65d92e8cff22541.s3tc.ctex
+.godot/imported/dealer hands_adrenaline1_skin base hand_left.png-f058eaf5388727c943ced7654f301064.s3tc.ctex
+.godot/imported/dealer hands_adrenaline1_syringe test2.png-ab90520edc2db2fe840b587a9d18427e.s3tc.ctex
+.godot/imported/dealer hands_adrenaline1_valve thing.png-24b6c59264c9bff1206d435e579b7457.s3tc.ctex
+.godot/imported/dealer hands_burner phone1_burner phone2.png-97486dd54a348a0f3b87c9332fc3a29e.s3tc.ctex
+.godot/imported/dealer hands_burner phone1_skin base hand_left.png-2a2bba3231eec7098ae6d349308e5801.s3tc.ctex
+.godot/imported/dealer hands_expired medicine blister pack1_blister pack2.png-838d3c23d98841e0725e4c012f854fa6.s3tc.ctex
+.godot/imported/dealer hands_expired medicine blister pack1_pill box label new5.png-4591ebb94e3163e89c69672782085d46.s3tc.ctex
+.godot/imported/dealer hands_expired medicine1_blister pack2.png-0111f177914e2c3cad736357d96ed94f.s3tc.ctex
+.godot/imported/dealer hands_expired medicine1_pill box label new5.png-31f065ee67f3451240510429435cc8e8.s3tc.ctex
+.godot/imported/dealer hands_expired medicine1_skin base hand_left.png-37bef297c9da84ef441f575dfb965fef.s3tc.ctex
+.godot/imported/dealer hands_inverter1_inverter.png-4fc18efaf5ddffe19f28640fc50820d2.s3tc.ctex
+.godot/imported/dealer hands_inverter1_plastic stained.png-1ba85e0fbaa27d7064531ebaea3aa6f0.s3tc.ctex
+.godot/imported/dealer hands_inverter1_skin base hand_left.png-c76044b1467831657a8d7dbaf1583219.s3tc.ctex
+.godot/imported/dealer hand_handcuffed1_skin base hand_left.png-b2d6941d268587c0bc46006163479172.s3tc.ctex
+.godot/imported/dealer hand_zippo_Asphalt007_1K_NormalGL.png-1d136ea47a31fcadfaee8139326e928a.s3tc.ctex
+.godot/imported/dealer hand_zippo_Metal021_1K_Color.png-37c89fa9c33b3827b438196dc0320a25.s3tc.ctex
+.godot/imported/dealer hand_zippo_Metal022_1K_Color.png-3aea0a613e786ae46839815670439505.s3tc.ctex
+.godot/imported/dealer hand_zippo_skin base hand_left.png-9945983513e89546e3978771752465c0.s3tc.ctex
+.godot/imported/dealer head crushed test1_skin base.png-1633dc68c07f553a488bde0c9ebfa666.s3tc.ctex
+.godot/imported/dealer head crushed test_skin base.png-dafdf49a9f964b38e0e77fd67d0d4d4e.s3tc.ctex
+.godot/imported/dealer head rigged1_skin base.png-e5ca57cdfecf0689165e3572a914481e.s3tc.ctex
+.godot/imported/dealer temp model export1_skin base.png-353e292f0f8ffe22e25c46f7bfc9960d.s3tc.ctex
+.godot/imported/defib charge broke5.png-58c60ce7c646cffaba3112b8c1044fd3.s3tc.ctex
+.godot/imported/defib charge broke6.png-de49a6638d8575ae0a19037aa92dc84d.s3tc.ctex
+.godot/imported/defib charge broken4.png-241e158dfb996d6155ec8faabfa972d1.s3tc.ctex
+.godot/imported/defib charge png.png-4a08a71fed2b5a28d106417c9ba3f43d.s3tc.ctex
+.godot/imported/defib charge_excl.png-d78fbc1a5d5a59e44006ea82432a7a17.s3tc.ctex
+.godot/imported/defib charge_skull png.png-52e39bb73b226e3aa1eeee426da3f476.s3tc.ctex
+.godot/imported/display round indicator.png-9d1758a820f58a782ca033819999837b.s3tc.ctex
+.godot/imported/display rounds.png-afc6202d103bfbe9379f472d08447437.s3tc.ctex
+.godot/imported/eragreagearg.png-7d6c3362c521b956f9296b5e4c9a9341.s3tc.ctex
+.godot/imported/expired medicine opaque2_pill box label new5.png-3b7cdc13f0a499ef4f647d586d5bcfd0.s3tc.ctex
+.godot/imported/expired medicine texture corrected1.png-49e123ed3bc9ad897d948a5ed10bbb9b.s3tc.ctex
+.godot/imported/exterior environment blockout1_asphalt seamless temp.png-49b7d64d1b60aba9de6e6c3b2f266ed3.s3tc.ctex
+.godot/imported/exterior environment blockout1_concrete 2048 exterior2.png-8d5660c6577fcdd3170f54cc61e871c5.s3tc.ctex
+.godot/imported/exterior environment blockout1_door1.png-eb067b44a2b896a0f566cccaab12fd97.s3tc.ctex
+.godot/imported/exterior environment blockout1_windows1.png-203e55aa0f40e93b4f49d99c003f49e6.s3tc.ctex
+.godot/imported/exterior environment main1_abduction van engine.png-8e023443cfccb29a53999de05b77d4c3.s3tc.ctex
+.godot/imported/exterior environment main1_anodized aluminum red 1024.png-81541c4e9a0c218136545a3817fbcbea.s3tc.ctex
+.godot/imported/exterior environment main1_anodized aluminum white.png-fbe7006b5c9db6736213d1ee014b55e5.s3tc.ctex
+.godot/imported/exterior environment main1_asphalt painted sector1.png-63fff3ce1e0e20a6f6d7e7dd91c89aa9.s3tc.ctex
+.godot/imported/exterior environment main1_asphalt seamless temp.png-4596c46a1a6a72f49a9d29263eef992b.s3tc.ctex
+.godot/imported/exterior environment main1_boombox1.png-68de7ea205b316091c2737779629eb9a.s3tc.ctex
+.godot/imported/exterior environment main1_concrete 2048 exterior2.png-a6d51361d507d577efb75b08577918dd.s3tc.ctex
+.godot/imported/exterior environment main1_door1.png-5adadfb353c3b9069ca79b674bad1c08.s3tc.ctex
+.godot/imported/exterior environment main1_ford headlights.png-b20d6a90ae21767d806f0a291c29539e.s3tc.ctex
+.godot/imported/exterior environment main1_ford tire.png-2a5cca435b8cf8e2fcb61d81db873063.s3tc.ctex
+.godot/imported/exterior environment main1_hustler1.png-57bf7c45c0b5c2bea698d1d345635e5a.s3tc.ctex
+.godot/imported/exterior environment main1_Metal025_1K_Color.png-1de5a5761b88c9bf2131c7114e9fa1d5.s3tc.ctex
+.godot/imported/exterior environment main1_tag1.png-d2ce3d5863218b6264581ea3e46d4654.s3tc.ctex
+.godot/imported/exterior environment main1_tag2.png-8c63f1b05180313b0c747b4caa9852c1.s3tc.ctex
+.godot/imported/exterior environment main1_tag3.png-63b5fe16c4653437d0814b28bb8a7bc6.s3tc.ctex
+.godot/imported/exterior environment main1_tire rusty desat.png-4ecbc238aed812f289067a78e1909137.s3tc.ctex
+.godot/imported/exterior environment main1_tire tread it1.png-99721dbb5e0ecb5ceaec30c4eba7b664.s3tc.ctex
+.godot/imported/exterior environment main1_trash1.png-21327537c6e215e31daadd551c7b867a.s3tc.ctex
+.godot/imported/exterior environment main1_tree1.png-8ee85efece8424362b0c5cf4ff4d3801.s3tc.ctex
+.godot/imported/exterior environment main1_tree2.png-3d03e9175c4484c8a01723d194e4ed59.s3tc.ctex
+.godot/imported/exterior environment main1_windows1.png-37ec1d2449249e1cde16d26329e98eab.s3tc.ctex
+.godot/imported/exterior environment main1_wood grain pallet1.png-f95017c45b70ba1ec7bd3a303840ac8d.s3tc.ctex
+.godot/imported/exterior window emission plane segment2_window mask.png-0342f92f72cf81ce3d01a31ff18a1846.s3tc.ctex
+.godot/imported/exterior window emission plane segment2_windows1.png-d42d836fe0c4056f03beff6edd959e87.s3tc.ctex
+.godot/imported/exterior window emission plane1_window mask.png-ea1f116737663d1a4609054969d82930.s3tc.ctex
+.godot/imported/exterior window emission plane1_windows1.png-4374f02c286a96bb4825b40616ae7fee.s3tc.ctex
+.godot/imported/exterior window environment new2_diry window1.png-12d073a745d12d3599327a02f55cf1e2.s3tc.ctex
+.godot/imported/exterior window environment new2_metal door.png-3abfc6027e925b2219711cc52b626ee3.s3tc.ctex
+.godot/imported/exterior window environment new2_window.png-0611e25caa1ac202aabaadc8ac4a003e.s3tc.ctex
+.godot/imported/exterior window environment new2_windows1.png-8e9c8e5cf9dbb537471bfc1be0e4af1e.s3tc.ctex
+.godot/imported/fan blade reimport1_fan base texture2.png-7fd77cd44fd1e0cefc43c6434b6ced53.s3tc.ctex
+.godot/imported/globe2_world map png.png-32ed9fa724656bb6bd30e9450e87cd03.s3tc.ctex
+.godot/imported/hands1_skin base hand_left.png-4b7519b2a1b61eaccb3cbac13a82d27f.s3tc.ctex
+.godot/imported/hands_briefcase1_skin base hand_left.png-c61db04fc7e3b35e921f671ad3e4cde4.s3tc.ctex
+.godot/imported/hands_on table1_skin base hand_left.png-5442cbb8acc02447d7be8a254c0e9181.s3tc.ctex
+.godot/imported/health counter corruption.png-ac4e28843ad437efc932ebcc54fc11a1.s3tc.ctex
+.godot/imported/health counter main1_circuitboards.png-e2cab100c27acd9378e49130e61db2d4.s3tc.ctex
+.godot/imported/health counter main1_cutter device panel.png-df820e8103e149f1414c2f66a37160c2.s3tc.ctex
+.godot/imported/health counter winner state temp1.png-1275a1547b0a241a2c5ba1fb69db6117.s3tc.ctex
+.godot/imported/health indicator new1_health indicator paint2.png-dc7acee583ff2c39b037d6698b7d8a8c.s3tc.ctex
+.godot/imported/ibm key1_ibm key the other side computer.png-4e903580579a4d13946eaeb47d33b4b3.s3tc.ctex
+.godot/imported/indicator remote2_koni remote1.png-86cbabb0f8c949fca691ccbdb5a015be.s3tc.ctex
+.godot/imported/indicator remote3_koni remote1.png-026d00daa49a1d81b9424e468ee6c57e.s3tc.ctex
+.godot/imported/indicator remote3_koni remote1.png-76e811b251bbc4ebfb2416f1db653165.s3tc.ctex
+.godot/imported/interior environment main1_brick 2048 edited_left side1.png-2c2ce9a30d949a327b828c9fe5b2ba58.s3tc.ctex
+.godot/imported/interior environment main1_brick 2048 edited_side2.png-9ca61af142e627ed1de0042e0cfc8580.s3tc.ctex
+.godot/imported/interior environment main1_bucket base1.png-5684feb5d593d23f7ac869c267382e2b.s3tc.ctex
+.godot/imported/interior environment main1_cardboard box3.png-136d9a4fef5719e5bcb0db1d399b6adb.s3tc.ctex
+.godot/imported/interior environment main1_cigarette_28.png-cc2188855a017f5de6a03b3ba6e05909.s3tc.ctex
+.godot/imported/interior environment main1_concrete dark1.png-3366437286d1cbc03b12d930f570db18.s3tc.ctex
+.godot/imported/interior environment main1_concrete dark1_copy window.png-6a7f6e3c2cbeb19ec74baa7842ea8336.s3tc.ctex
+.godot/imported/interior environment main1_device1 edited1.png-a9b3b18dbd06b8971034681bf8656156.s3tc.ctex
+.godot/imported/interior environment main1_device2 edited2.png-f94ab2faab9710caeed5e2b9fc9b608c.s3tc.ctex
+.godot/imported/interior environment main1_device4 edited3.png-72283baa90f0ba5cf9df7ffe573965a1.s3tc.ctex
+.godot/imported/interior environment main1_device8 edited3.png-26a17f487321b06b9f8e7f0200666fc2.s3tc.ctex
+.godot/imported/interior environment main1_device9 base2.png-3cc85cde5dcfb84cef510af3a8dd8d4a.s3tc.ctex
+.godot/imported/interior environment main1_dirt.png-0f40d4e60b6bf780cecaa935ccc088b1.s3tc.ctex
+.godot/imported/interior environment main1_estonia speaker base2.png-20d778fed233f8b62db2577dee4dd6d3.s3tc.ctex
+.godot/imported/interior environment main1_fabrtic1.png-b0819cbf6bdaa4f5144079f7d1c0a1f1.s3tc.ctex
+.godot/imported/interior environment main1_fan base texture2.png-da1d569d2efa2f7fa16cba919e5fdbb1.s3tc.ctex
+.godot/imported/interior environment main1_fixture.png-75b66093257057ea6b8cf10fb63c5472.s3tc.ctex
+.godot/imported/interior environment main1_lintmakk2.png-69a39083fdcbc6f1b1ad1c445b1bd277.s3tc.ctex
+.godot/imported/interior environment main1_lucky strike ripped2.png-1c8697dab2c8e01caaa7f7b72ce4df60.s3tc.ctex
+.godot/imported/interior environment main1_Metal021_1K_Color.png-747d4e7282e159f62ff9ffef477e63bf.s3tc.ctex
+.godot/imported/interior environment main1_Metal025_1K_Color.png-83f36ac3cb66502f5d5c46e26376f582.s3tc.ctex
+.godot/imported/interior environment main1_mp interior fixture2.png-a5d17c5d3b782e2f9a7dce5599c2b5d5.s3tc.ctex
+.godot/imported/interior environment main1_outlet1.png-e67fdbb533c9f2d2663817d6051b185e.s3tc.ctex
+.godot/imported/interior environment main1_paperwork1.png-27752f4202603ed864deede0c8893e0d.s3tc.ctex
+.godot/imported/interior environment main1_pipe base2 copy3.png-ddd4422592f9ea414aa89de85c465a40.s3tc.ctex
+.godot/imported/interior environment main1_plastic blue base crate1.png-ea4646366b1eec12ddae419cd2ee0cdd.s3tc.ctex
+.godot/imported/interior environment main1_radiator base copy main.png-6c4f09b3a088ed8e64a4d0e2be0be0b0.s3tc.ctex
+.godot/imported/interior environment main1_radiator base copy pipe.png-e97e17a8b4a27017b575925e3a7b4079.s3tc.ctex
+.godot/imported/interior environment main1_rust7.png-e853e6dc965f1161d12f322646a5a3c7.s3tc.ctex
+.godot/imported/interior environment main1_shelf1.png-027c825236d251f862d278b0fa974293.s3tc.ctex
+.godot/imported/interior environment main1_speaker plastic base2.png-fb70cec06b7baf3fece0275cc9fee333.s3tc.ctex
+.godot/imported/interior environment main1_speaker tall base.png-977fdb464de1debeede0aa9603767737.s3tc.ctex
+.godot/imported/interior environment main1_speaker1 edited.png-e9a0af2304cfe7a36f30b69837cd362d.s3tc.ctex
+.godot/imported/interior environment main1_sponge1.png-21acf9567d44242fc10f9b1225256dec.s3tc.ctex
+.godot/imported/interior environment main1_vhs spines1.png-088b2c548242f97104319d5dc0ffb41a.s3tc.ctex
+.godot/imported/interior environment main1_wood grain pallet1.png-094d3b5a2f6393b97f486432cb550df6.s3tc.ctex
+.godot/imported/interior environment wall separate1_brick 2048 edited_left side1.png-9560e2fdef1728eccf6948ec0bcbc412.s3tc.ctex
+.godot/imported/interior environment wall separate1_brick 2048 edited_side2.png-a08a01a1b40b60cb07385ab0d1ff8532.s3tc.ctex
+.godot/imported/interior environment wall separate1_concrete dark1.png-99c70fc032a85cced4f13ddc4fc5384a.s3tc.ctex
+.godot/imported/interior environment wall separate1_concrete dark1_copy window.png-ce2948d082e017628b20e25d0dd48093.s3tc.ctex
+.godot/imported/interior environment wall separate1_outlet1.png-a46c1d56578fb7390ec262bcdf65652c.s3tc.ctex
+.godot/imported/inverter shattered frame1_plastic stained.png-b3599353df7cd51e50ff36148d5f69ae.s3tc.ctex
+.godot/imported/item remover main2_gauge indicator2_green.png-1974727aa9f2522fb1d017f51104d465.s3tc.ctex
+.godot/imported/item remover main2_item remover grille1.png-2575570046034a822f6472a20e7ddbff.s3tc.ctex
+.godot/imported/item remover main2_tech ten2.png-4f9b8f45f1122f18076ef811aa0ccacf.s3tc.ctex
+.godot/imported/jammer interface3_blank.png-d670f5b78b526b665dd190336ae37411.s3tc.ctex
+.godot/imported/jammer interface3_frame.png-639c84fc49fc7d17ebf150fd67a1336d.s3tc.ctex
+.godot/imported/jammer interface3_grid bootup1.png-58a183c7707430a056a148ddb4a79cc7.s3tc.ctex
+.godot/imported/jammer interface3_idle.png-19b4ff099c33b91976687a44f423c1d8.s3tc.ctex
+.godot/imported/jammer interface3_select forward.png-65cca63a00d934e4a3c0355af163ded6.s3tc.ctex
+.godot/imported/jammer interface3_select left.png-dd822cb009a2d315beca7a84cb22707e.s3tc.ctex
+.godot/imported/jammer interface3_select right.png-dee0aa692aeb5076b35c1111d5595555.s3tc.ctex
+.godot/imported/jammer interface3_tracker.png-85727232bceaf0284622e08626eb5848.s3tc.ctex
+.godot/imported/jammer interface5.png-bef545fca43a903f5615deee63703e22.s3tc.ctex
+.godot/imported/jammer screen dirt overlay.png-43eed6a1ad791d24de6962af66741e06.s3tc.ctex
+.godot/imported/jammer4 edited.png-6e1e0c36d601a9deede342b5fe944e9d.s3tc.ctex
+.godot/imported/jammer4 edited2.png-6182ab48e865f1464e1989342758c7af.s3tc.ctex
+.godot/imported/jammer5.png-ec9aa64bb6d2d08459130f35c8cdb41c.s3tc.ctex
+.godot/imported/layer0.png-4e7b512e6fad186247014394b17357e9.s3tc.ctex
+.godot/imported/layer3.png-a18a8a1c3226769d994175f9e037cbe5.s3tc.ctex
+.godot/imported/lobby area blockout1_TCom_WoodPlanksFloors0026_1_seamless_S.png-7e5bc68d9935237755e40ef8c16f7219.s3tc.ctex
+.godot/imported/lobby area blockout2_TCom_WoodPlanksFloors0026_1_seamless_S.png-95e58cc3e3d8819be4f94c9e9ec63f24.s3tc.ctex
+.godot/imported/lobby area blockout3_TCom_WoodPlanksFloors0026_1_seamless_S.png-a668132829248f44f3cad04b7a64097a.s3tc.ctex
+.godot/imported/lobby area blockout4_metal door.png-00104ff84cd6960992a5e17046d4eb2f.s3tc.ctex
+.godot/imported/lobby area blockout4_TCom_WoodPlanksFloors0026_1_seamless_S.png-2f82b35e984b72f37941ea9275ffd626.s3tc.ctex
+.godot/imported/lobby area blockout4_window.png-3bd669b7e254dc6a735939b107539df5.s3tc.ctex
+.godot/imported/lobby area blockout5_metal door.png-502dcfceef7cacae79c43ea25f32c6e2.s3tc.ctex
+.godot/imported/lobby area blockout5_TCom_WoodPlanksFloors0026_1_seamless_S.png-b79e8b500ac8313ac2494202fc6b6337.s3tc.ctex
+.godot/imported/lobby area blockout5_window.png-c5b489a94ec0ce4f1e96a9974a174636.s3tc.ctex
+.godot/imported/lock icon.png-1e8d8b9fa8524acfe1b8f55eb9317277.s3tc.ctex
+.godot/imported/logo1 main buckshot1.png-5fc6574f1b1de6e7e70f5fa6531d5a2a.s3tc.ctex
+.godot/imported/logo1 main buckshot2.png-06e6ec1c9941b60bc675a53232dc49c9.s3tc.ctex
+.godot/imported/logo1 main.png-c8523c188c894ec3c230ee502ea214f5.s3tc.ctex
+.godot/imported/logo1 main2.png-4211e929664b65727a3a30eea8e413a9.s3tc.ctex
+.godot/imported/main hand instance separate mesh test1_item briefcase5.png-e20d7f35ac4bd8201edb37f82fae4869.s3tc.ctex
+.godot/imported/main hand instance separate mesh test1_L_item briefcase5.png-eadb20898a4435bb821c008314d2a56c.s3tc.ctex
+.godot/imported/main hand instance_LR_additional grab2_skin base hand_left.png-26d6abc0d450aa50c230e45ded7de4e3.s3tc.ctex
+.godot/imported/main hand instance_L_skin base hand_left.png-135beaaef85a145a6a800161ce978714.s3tc.ctex
+.godot/imported/main hand instance_R_additional1_skin base hand_left.png-64f52073521884257647b34e9af82cac.s3tc.ctex
+.godot/imported/main hand instance_R_pinch5_skin base hand_left.png-ec735c6b1a9d9c8c32d24a0c7a1dce7c.s3tc.ctex
+.godot/imported/main hand instance_R_point1_skin base hand_left.png-0e39f4885d35d7f16f0eff613f384d02.s3tc.ctex
+.godot/imported/main hand instance_R_skin base hand_left.png-8e002fda5be5e3738ee16ca632b9d624.s3tc.ctex
+.godot/imported/main items1_Asphalt007_1K_NormalGL.png-bb7508fc496a55fe2ced754af989df57.s3tc.ctex
+.godot/imported/main items1_beer can brighter metal.png-c2b865cc288ce9d60996c52def0068af.s3tc.ctex
+.godot/imported/main items1_beer can2 no text.png-7dd0579aae82cce262ffded1a8390ef4.s3tc.ctex
+.godot/imported/main items1_cig box front 2.png-312af774dd90f1887f522bd7a5c05c4a.s3tc.ctex
+.godot/imported/main items1_cig box side2.png-57b3a8e048d57a9418d63cdfe86538fc.s3tc.ctex
+.godot/imported/main items1_magnifying glass.png-1dafba3f76e82e1b6cff731f03b6322b.s3tc.ctex
+.godot/imported/main items1_Metal021_1K_Color.png-7891b7da6c3d3c45ce2626b6f3470d23.s3tc.ctex
+.godot/imported/main items1_Metal022_1K_Color.png-7c55c4113445183fe81c964c11aa8d3c.s3tc.ctex
+.godot/imported/main items1_saw texture2.png-7cea431ef46500331b3611e13ec1fc08.s3tc.ctex
+.godot/imported/makeship plushie1_metal024 pump action painted normal.png-f21b1dd18475898fe2941476c36ce253.s3tc.ctex
+.godot/imported/makeship plushie1_metal24 pump action painted.png-2d8fa856abe2c1402177373d6e5bcfe5.s3tc.ctex
+.godot/imported/makeship plushie1_metal24 pump action painted2.png-dd9c604ee6a3c4c292dad57281d7972c.s3tc.ctex
+.godot/imported/makeship plushie1_teddy fur base.png-d0af03bef5c724ffa01347912cc192c9.s3tc.ctex
+.godot/imported/mouthwash bottle1_Cap-Colour.png-8c7791efcd41c58371f643cb928b2a99.s3tc.ctex
+.godot/imported/mouthwash bottle1_NEWmouthwashBottle-Colour1.png-fd248bf0f97496e1b7249ecf5dc847aa.s3tc.ctex
+.godot/imported/mp_adrenaline1_brass albedo1.png-1676ff9ab9c3177d9309ac60a1bf5f62.s3tc.ctex
+.godot/imported/mp_adrenaline1_syringe test2.png-07f8da8dc55c52795909ce8b44245298.s3tc.ctex
+.godot/imported/mp_adrenaline1_valve thing.png-709d48101a121f5a8a4e726014e43c20.s3tc.ctex
+.godot/imported/mp_beer can interaction1_beer can brighter metal.png-c30e8ec099548d598890a2a31a87557d.s3tc.ctex
+.godot/imported/mp_beer can interaction1_beer can2 no text.png-f1d48f7db94c7ed7e88dd9de19ced4ee.s3tc.ctex
+.godot/imported/mp_briefcase machine1_base metal_briefcase machine darkened3.png-8c18abeeec26ed3c0a5d5b684d2cd61f.s3tc.ctex
+.godot/imported/mp_briefcase machine1_base metal_briefcase machine.png-a4bd0d681e331a5cf42d4977d2e7e580.s3tc.ctex
+.godot/imported/mp_briefcase machine1_money4.png-d27ca3fa239e057f9e7e2cc42647093c.s3tc.ctex
+.godot/imported/mp_briefcase machine1_suitsetamine keelatud.png-bfd2299864c22fa1ea1ecc15711af22a.s3tc.ctex
+.godot/imported/mp_burner phone interaction1_burner phone2.png-eea5a897f5a61c60fc2ff0d29993817d.s3tc.ctex
+.godot/imported/mp_center piece arms new mesh3_metal sheet main rotator_copy1.png-f38ab3ecd5cafb1a2f08aec2ae493c38.s3tc.ctex
+.godot/imported/mp_cigarette interaction2_cig box front 2.png-2b49e98a43aea262d456bd24122e06ae.s3tc.ctex
+.godot/imported/mp_cigarette interaction2_cig box side2.png-0dd3889159843c72b2af3a0daff4d444.s3tc.ctex
+.godot/imported/mp_cigarette interaction2_jet flame2.png-8e7e88e74d452410cb078f386fe865fe.s3tc.ctex
+.godot/imported/mp_cigarette interaction2_zippo steel base.png-bd9b50babca9b661b1da9e9071abfab1.s3tc.ctex
+.godot/imported/mp_customization gas mask1_gas mask base2.png-76014488e43154ef114b3da5b8b145f5.s3tc.ctex
+.godot/imported/mp_customization respirator2_respirator base1.png-c0d5440dd1d11cb9d80557c7a92e6683.s3tc.ctex
+.godot/imported/mp_customization welding mask1_welding mask base2.png-336d8a4dea8c39f2cd894fd74959e392.s3tc.ctex
+.godot/imported/mp_health counter charge1.png-bba04b908c4a65e99d88a18ecd3f84ff.s3tc.ctex
+.godot/imported/mp_health counter vertical with timeout indicator2_copper1.png-e79f3c07dd93f10504eb56a62187b10d.s3tc.ctex
+.godot/imported/mp_inverter interaction1_inverter.png-fd8b572637bfaad10d555dddc023c7ad.s3tc.ctex
+.godot/imported/mp_inverter interaction1_plastic stained.png-d5b636b89ab122d268617524535b8699.s3tc.ctex
+.godot/imported/mp_item briefcase lid with timeout display1_item briefcase5.png-211f063692619d4ba204a5b026fc1f3e.s3tc.ctex
+.godot/imported/mp_item briefcase test1_item briefcase5.png-fd2eb47d6e840e4b8aa7fbdf1915d9b8.s3tc.ctex
+.godot/imported/mp_items3_beer can brighter metal.png-a2d205a5b0c6d5cf5273bd49164f1797.s3tc.ctex
+.godot/imported/mp_items3_beer can2 no text.png-6835c09dae390de1a9042764657ce5ce.s3tc.ctex
+.godot/imported/mp_items3_burner phone2.png-9d6f0037804ac23130766ba7315106f2.s3tc.ctex
+.godot/imported/mp_items3_cig box front 2.png-3345c0351ba02c806c3984f8db6c0089.s3tc.ctex
+.godot/imported/mp_items3_cig box side2.png-d98e157e033e5dd3729311a5b90b464f.s3tc.ctex
+.godot/imported/mp_items3_inverter.png-6c99c222ff6791dd6f9fa31bebc429a3.s3tc.ctex
+.godot/imported/mp_items3_magnifying glass.png-5f5987216db8bd4998247861034a59e6.s3tc.ctex
+.godot/imported/mp_items3_pill box label new5.png-85ab03f91f05571fac147b101beef42c.s3tc.ctex
+.godot/imported/mp_items3_plastic stained.png-a69d8efe50c88b08934272e39b969692.s3tc.ctex
+.godot/imported/mp_jammer proportions test1_jammer4.png-fab34e7ac17d8e9c22f49ca4ba2ab38d.s3tc.ctex
+.godot/imported/mp_jammer2_jammer4.png-4f07452f48dee4579aee24eced009dba.s3tc.ctex
+.godot/imported/mp_jammer3_jammer4.png-a1a7ee2be442790aa5615ee851458910.s3tc.ctex
+.godot/imported/mp_magnifier broken1_magnifying glass.png-e30c3442e21623ff9d6a8721ec03e5b5.s3tc.ctex
+.godot/imported/mp_muzzle flash5.png-b15fea3312970145217d003e32badcf0.s3tc.ctex
+.godot/imported/mp_phone screen backdrop cracked.png-8d620a249c4b004dbb23853304ad09e4.s3tc.ctex
+.godot/imported/mp_phone screen backdrop cracked2.png-0a0313aea2a405fe2c80ed85c43542e2.s3tc.ctex
+.godot/imported/mp_phone screen backdrop.png-3c0ad7bb71121ae227fd3e2c55c8928f.s3tc.ctex
+.godot/imported/mp_round indicator base.png-f861d60ab0be6d81ea2647fe97b74a16.s3tc.ctex
+.godot/imported/mp_round indicator circle.png-15bc9fea1440c0885d0cb832b8143894.s3tc.ctex
+.godot/imported/mp_shotgun mesh base fixed1_metal024 pump action painted normal.png-beee3f539fb34587e3386dd279216701.s3tc.ctex
+.godot/imported/mp_shotgun mesh base fixed1_metal24 pump action painted.png-7cfe750176e888c464f29173a7cd81fc.s3tc.ctex
+.godot/imported/mp_shotgun mesh base fixed1_metal24 pump action painted2.png-d0a2c66a13954ba72dcba0db5499cf80.s3tc.ctex
+.godot/imported/mp_shotgun mesh cut segment1_metal024 pump action painted normal.png-9c028e46874527d1cfc6e25a5719f48b.s3tc.ctex
+.godot/imported/mp_shotgun mesh cut segment1_metal24 pump action painted.png-7f796a685b9c4ec38bc4bf051894b3b7.s3tc.ctex
+.godot/imported/mp_shotgun mesh cut segment1_metal24 pump action painted2.png-a217ce4b977e8ef99d32be199e3e028d.s3tc.ctex
+.godot/imported/mp_vertical health indicator wood frame1_copper1.png-d1c0b5dfd67e5d335e3bdcc7678418c5.s3tc.ctex
+.godot/imported/mp_wall gasket1_asphalt seamless temp.png-5447a5bf6022dfa5971002edb662804c.s3tc.ctex
+.godot/imported/muzzle flash cone1_mp_muzzle flash4.png-4091f2b4d283dfd4dd05f154eeed272b.s3tc.ctex
+.godot/imported/muzzle flash plane main1_muzzle flash plane3.png-0bb4fb64720e67c1bf15f121d5eefd7f.s3tc.ctex
+.godot/imported/muzzle flash plane main1_muzzle flash plane4.png-d3109c39a4232705602ac3e71796aa18.s3tc.ctex
+.godot/imported/muzzle flash test1_muzzle flash.png-3fa7196ebf2d34a262552847b164d5b3.s3tc.ctex
+.godot/imported/new items main1_blister pack2.png-1e0c09dd5f62788fb564bef8a7dbf436.s3tc.ctex
+.godot/imported/new items main1_brass albedo1.png-81aabdda2d286cf1ae68c4630c019295.s3tc.ctex
+.godot/imported/new items main1_burner phone2.png-ed99eae9330666b41dde3a31dac86aa1.s3tc.ctex
+.godot/imported/new items main1_inverter.png-68a87b02f1af5144df4dcf22c3671970.s3tc.ctex
+.godot/imported/new items main1_pill box label new5.png-5df00f6df0a875a4e139b7a0ae6e8da7.s3tc.ctex
+.godot/imported/new items main1_plastic stained.png-d32a3bd06d98d798180b8942a9527a6f.s3tc.ctex
+.godot/imported/new items main1_syringe test2.png-183e57a591b026e511a0bd2fe953a738.s3tc.ctex
+.godot/imported/new items main1_valve thing.png-5187e8125341262933e03bdb7a87af1f.s3tc.ctex
+.godot/imported/no connection.png-d6b85821d8749346dad5c2b9257cf07b.s3tc.ctex
+.godot/imported/orange3_leaf1.png-119727db6ded067e7b05ea877e35d57d.s3tc.ctex
+.godot/imported/orange3_orange1.png-643331de0cb2afd3cd91433f421ffa18.s3tc.ctex
+.godot/imported/phone screen backdrop cracked.png-b179beae6ed0d87aa66a8dadaa048f5f.s3tc.ctex
+.godot/imported/phone screen backdrop cracked2.png-1630a0bf6a608dd4d92601aea5961299.s3tc.ctex
+.godot/imported/phone screen backdrop cracked23.png-ecf7f3a00f19c748ba628d30484b7ed9.s3tc.ctex
+.godot/imported/phone screen backdrop UI.png-09fac0f90cdc967ea8c6ef47351076e3.s3tc.ctex
+.godot/imported/placeholder characters1_metal024 pump action painted normal.png-dc404a8372b54f142fd6483e06bc30fa.s3tc.ctex
+.godot/imported/placeholder characters1_metal024 pump action painted normal2.png-916564e2dfb54b786a94fa2c9ec0c116.s3tc.ctex
+.godot/imported/placeholder characters1_metal24 pump action painted.png-148ff7fafc95e00ac8169af4e210732b.s3tc.ctex
+.godot/imported/placeholder characters1_metal24 pump action painted2.png-75da431719048c436a050b5ebce0708f.s3tc.ctex
+.godot/imported/placeholder characters1_smoker dude.png-d394808400c27efea34ee722e3bc44ce.s3tc.ctex
+.godot/imported/placeholder instance1_placeholder instance1.png-d585eaa93d6fa8f3fb44ceb02839cc79.s3tc.ctex
+.godot/imported/player leg1_smoker dude.png-a6318422691e478ec0f7c128a469125c.s3tc.ctex
+.godot/imported/player vehicle1_metal024 pump action painted normal.png-907958a77933c08cebd695445bdd53eb.s3tc.ctex
+.godot/imported/player vehicle1_metal024 pump action painted normal2.png-f703b59dbd5896f8b7c96fa810399bd4.s3tc.ctex
+.godot/imported/player vehicle1_metal24 pump action painted.png-0e6d73d8512d0d3045c99d867e180daa.s3tc.ctex
+.godot/imported/player vehicle1_metal24 pump action painted2.png-528f9dd228986262145de8e9500855f4.s3tc.ctex
+.godot/imported/player vehicle1_money4.png-2fa4d1573a016db6b742a4264bbac6e7.s3tc.ctex
+.godot/imported/release form bloody god.png-c8b6245b388cef3ae001c0537858521a.s3tc.ctex
+.godot/imported/release form new2.png-403f599d727aac7ed688d73637f0a7c5.s3tc.ctex
+.godot/imported/release form patched1_release form new2.png-b41683339b249ad17ba857940127cad3.s3tc.ctex
+.godot/imported/release form patched2_release form new2.png-2edd3ddfc32b1070cdd3d5b03f2cd74d.s3tc.ctex
+.godot/imported/restroom1_ceramic 1024.png-c261417a49d7d467d7ecf8d76cb67ffc.s3tc.ctex
+.godot/imported/restroom1_metal door.png-04ed84a4f3bc428a951e5a90d7bca812.s3tc.ctex
+.godot/imported/restroom1_stall door.png-b294caf74b04f6d8a768a41a5412e688.s3tc.ctex
+.godot/imported/restroom1_TCom_Grungemaps0164_1_S.png-7b0f5e1227ec6896580fbf4f46026e2d.s3tc.ctex
+.godot/imported/restroom1_tiles broken 1024 albedo.png-7a4c874eb2e89b10498ffeb821f753fa.s3tc.ctex
+.godot/imported/restroom1_tiles broken 1024 nromal.png-37fe4faf09b35e6277697def7702ba26.s3tc.ctex
+.godot/imported/restroom1_tiles normal 2048.png-e48afab04d9b117b11f07cdede0d1189.s3tc.ctex
+.godot/imported/restroom1_tilies normal 2048 normal map.png-23ca6ef515aea4ad5eccc92a7f3cab40.s3tc.ctex
+.godot/imported/restroom1_towel dispenser base.png-2924d15bddb723cec5f842939ae59047.s3tc.ctex
+.godot/imported/restroom1_xanax label.png-d38a6b5e48b2cbbe542c23cd14fee494.s3tc.ctex
+.godot/imported/rpg shitpost1_Metal046B_1K-JPG_Color.png-642c20c0055c6139a21e47f6b11ac784.s3tc.ctex
+.godot/imported/rpg shitpost1_rpg metal_green.png-26bdb397d6ae117ea7ce81f5ca256838.s3tc.ctex
+.godot/imported/rpg shitpost1_Wood066_1K-JPG_Color.png-8343b8e886ecc92099c5519297fe240a.s3tc.ctex
+.godot/imported/sample object export1_Metal025_1K_Color.png-b489cd7d21d703dc90a56c852513cbba.s3tc.ctex
+.godot/imported/sample object export1_Metal025_1K_NormalGL.png-798fa9c74f77836b8c026ff26c2a191e.s3tc.ctex
+.godot/imported/shotgun main1_metal sheet main rotator_copy1.png-2bfa18f46bd39f7697f02718d48e3536.s3tc.ctex
+.godot/imported/shotgun main1_metal024 pump action painted normal.png-1b3c7ce2e315ea4f9387e348934c9f97.s3tc.ctex
+.godot/imported/shotgun main1_metal024 pump action painted normal2.png-b03bde0ab5d25a7a635249bce0ae136e.s3tc.ctex
+.godot/imported/shotgun main1_metal24 pump action painted.png-6e9f2a303c0b259b18a5007dab061088.s3tc.ctex
+.godot/imported/shotgun main1_metal24 pump action painted2.png-3e7e682c64f07a6bf4f7140105672756.s3tc.ctex
+.godot/imported/shotgun test1_metal sheet main rotator_copy1.png-c16fc95a9f031738cf3a7007f6410275.s3tc.ctex
+.godot/imported/shotgun test1_metal024 pump action painted normal.png-efee22ab5eaa918f282460fd26f5a8ca.s3tc.ctex
+.godot/imported/shotgun test1_metal024 pump action painted normal2.png-f1a93b3ede76c583ced1fcbb3a00ea6d.s3tc.ctex
+.godot/imported/shotgun test1_metal24 pump action painted.png-70fad8c6a651c31f05bc91fb8ec9ecc4.s3tc.ctex
+.godot/imported/shotgun test1_metal24 pump action painted2.png-809336ed6dadf86a8b0a0cf9256dbc5e.s3tc.ctex
+.godot/imported/shotgun with hands2_metal024 pump action painted normal.png-c6a1d2ccd97f5d7080cee325c9a50f92.s3tc.ctex
+.godot/imported/shotgun with hands2_metal024 pump action painted normal2.png-b35468d3950ecb266b72def8404cd6c2.s3tc.ctex
+.godot/imported/shotgun with hands2_metal24 pump action painted.png-9967de0a84470f2a40dd172201e10583.s3tc.ctex
+.godot/imported/shotgun with hands2_metal24 pump action painted2.png-b3091b455a35bcba0d80f5706e0830b3.s3tc.ctex
+.godot/imported/shotgun with hands2_skin base hand_left.png-f14f3dd043a7d7e5aa9160d5bf6196a5.s3tc.ctex
+.godot/imported/signature machine lid1_base metal keyboard.png-db57a15b7f6a8e98ea1769f54329334b.s3tc.ctex
+.godot/imported/signature machine lid1_keyhole signature machine2.png-d13a9d3ae99b51be70cf45e6a5c07964.s3tc.ctex
+.godot/imported/signature machine writer1_base metal keyboard.png-483936fff330ee4faab6330db2b192e4.s3tc.ctex
+.godot/imported/signature machine writer1_keyhole signature machine2.png-c7f528f7297a7d9643fbc267cf2a0e67.s3tc.ctex
+.godot/imported/signature machine2_base metal keyboard.png-42bdd0e27294fb0bd4c39aa7dc00296a.s3tc.ctex
+.godot/imported/signature machine2_keyboard base.png-4641573e45b99c780eaa3d18df2362df.s3tc.ctex
+.godot/imported/signature machine2_release form1.png-facc79e5df04c9e56aab7bd1b174632c.s3tc.ctex
+.godot/imported/smoker dude revive player1_smoker dude.png-65ee8faa1585f186500f5584bb0d78b1.s3tc.ctex
+.godot/imported/smoking dude12_smoker dude.png-c9afc422bc6d58b5880d74ee219bd9a8.s3tc.ctex
+.godot/imported/stars.png-4f48d3934b24eadfd9160b9322c5e167.s3tc.ctex
+.godot/imported/table mp_main padding item remover1_tabletop felt highres9.png-1071e778cb17db973f80c427fa5a9778.s3tc.ctex
+.godot/imported/table mp_main padding with health indicator side2_tabletop main4.png-249d07215c7e7076f2872416fc4161e4.s3tc.ctex
+.godot/imported/table mp_shell sequence machine hinge1_metal sheet shell sequence machine base13.png-afa23e375c9971c7ecace31295cbc22b.s3tc.ctex
+.godot/imported/table mp_shell sequence machine1_metal sheet shell sequence machine base13.png-cd165ddf5c8997820b28a87b9e8e613d.s3tc.ctex
+.godot/imported/table mp_shell sequence machine1_metal sheet shell sequence machine upper base1.png-58840ecb1dd491fd56b10bc3851e8617.s3tc.ctex
+.godot/imported/table mp_shell sequence machine1_Metal023_1K-JPG_Color_edited.png-14c86e235ab6e537d188aea62bd6a6be.s3tc.ctex
+.godot/imported/table mp_shell sequence machine1_tabletop felt highres9.png-73fd3cdec5ebe875ee10f81908292333.s3tc.ctex
+.godot/imported/table mp_shell sequence machine3_metal sheet shell sequence machine base13.png-0f84967d01bf435f94c4cd34ac86b7b9.s3tc.ctex
+.godot/imported/table mp_shell sequence machine3_metal sheet shell sequence machine under padding base1.png-c08df74d3fcad122bce84db16a532277.s3tc.ctex
+.godot/imported/table mp_shell sequence machine3_metal sheet shell sequence machine upper base1.png-ae462e7cd91cba8ebe65b160093d23af.s3tc.ctex
+.godot/imported/table mp_shell sequence machine3_Metal023_1K-JPG_Color_edited.png-5e15a4a2a16d770b51a6ad53b469bcfe.s3tc.ctex
+.godot/imported/table mp_shell sequence machine3_tabletop felt highres9.png-8f25088f456b0fd1986b36ce6cd2ddb6.s3tc.ctex
+.godot/imported/tabletop blockout2_health indicator paint2.png-2867e40104c35b7426d14a06b1e905e0.s3tc.ctex
+.godot/imported/tabletop blockout2_metal sheet main rotator_darkened3.png-dcf127f3b87c7e24bf11ffafff70c3d9.s3tc.ctex
+.godot/imported/tabletop blockout2_tabletop main4.png-48c4e93a6f954d381306599d70af0154.s3tc.ctex
+.godot/imported/tabletop compartment grid_new.png-fa9a0ce17ee3619b955686c1ccea10ea.s3tc.ctex
+.godot/imported/tabletop compartment origins fix2_tabletop felt normal.png-1fab30652c013889c49baf779eca41ef.s3tc.ctex
+.godot/imported/tabletop compartment origins fix2_tabletop felt shell compartment.png-93290cd59fc5320bd04bb08497abcdc3.s3tc.ctex
+.godot/imported/tabletop compartment origins fix2_tabletop felt shotgun radius compartment2.png-0efa722c4f72b2b1d7af2ceaba467dc7.s3tc.ctex
+.godot/imported/tabletop compartment origins fix2_tabletop felt shotgun radius with lines greyed out.png-6a4c559423f81446eb782e9dabb77f85.s3tc.ctex
+.godot/imported/tabletop compartment origins fix2_tabletop felt shotgun radius wo lines.png-4a0c77245a5eaddb0bce362e979e24dc.s3tc.ctex
+.godot/imported/tabletop compartment origins fix2_tabletop felt_without lines.png-8cc01fd2676e7c92bd619c9ed9bd81c8.s3tc.ctex
+.godot/imported/tabletop export1_beer can brighter metal.png-a8d5e992b18005d1d00dadd116b3dc70.s3tc.ctex
+.godot/imported/tabletop export1_beer can2 no text.png-2768b8256853a84b6114915ab5be572e.s3tc.ctex
+.godot/imported/tabletop export1_cig box front 2.png-a2135972feaf8c406685938ef14f4f8a.s3tc.ctex
+.godot/imported/tabletop export1_cig box side2.png-62d4807d97dfbd2448fee19bd4a407b2.s3tc.ctex
+.godot/imported/tabletop export1_metal024 pump action painted normal.png-da59330e33b499bef01b102f9ab34a58.s3tc.ctex
+.godot/imported/tabletop export1_metal024 pump action painted normal2.png-c056fd3a85d4695715a77be75746f6ea.s3tc.ctex
+.godot/imported/tabletop export1_metal24 pump action painted.png-a466ee0acace83f2736f1c5dfe791c6f.s3tc.ctex
+.godot/imported/tabletop export1_metal24 pump action painted2.png-f226939c5312b7611f955fa5923f52a6.s3tc.ctex
+.godot/imported/tabletop export1_saw texture2.png-4863ae4169d811bd6c6eaebd54fd07bc.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt normal.png-a31df3c8326c48ba957c16a4630b4ebd.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt shotgun radius compartment2.png-6c5d2df3f5554aa09ad5011ee0495baa.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt shotgun radius with lines greyed out flippeed.png-d22999037f2ba61ffa2afee1e27721c6.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt shotgun radius with lines greyed out.png-590fd420423e7afb41390260fc5edb8a.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt shotgun radius wo lines.png-20368ed639d56b926adb287029685266.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt.png-86ffa52bcd1947cff80c6f38beb23768.s3tc.ctex
+.godot/imported/tabletop export1_tabletop felt_without lines.png-3aee61f1fae396fe6478e53316a0f7e0.s3tc.ctex
+.godot/imported/tabletop export2_beer can brighter metal.png-75d7b96d6333ad39af8c6660ec8f994d.s3tc.ctex
+.godot/imported/tabletop export2_beer can2 no text.png-13c27b466429e8f30fbeda592c9daad9.s3tc.ctex
+.godot/imported/tabletop export2_cig box front 2.png-21e629d2bf8915f9042c3c48a5dc3166.s3tc.ctex
+.godot/imported/tabletop export2_cig box side2.png-cbb25426bf9f6ac9468d4f9668b62600.s3tc.ctex
+.godot/imported/tabletop export2_metal024 pump action painted normal.png-bbc2af6cfc8deb196d6735e814c6565e.s3tc.ctex
+.godot/imported/tabletop export2_metal024 pump action painted normal2.png-57df5e8134673b07ca66cac5fb41d89c.s3tc.ctex
+.godot/imported/tabletop export2_metal24 pump action painted.png-e7e7771ec71ba0b238c2e12e7e36e7de.s3tc.ctex
+.godot/imported/tabletop export2_metal24 pump action painted2.png-4d463430fafe63f76a45b8920b55d419.s3tc.ctex
+.godot/imported/tabletop export2_saw texture2.png-16aeeb023ce294d87e92bee5abe2b626.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt normal.png-008ee54434dfa4db58935f07c0bb0445.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt shotgun radius compartment2.png-de6da70fd4cfd0e44b4313382f960688.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt shotgun radius with lines greyed out flippeed.png-59534c7acbeb8d9b07d0640492ccd556.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt shotgun radius with lines greyed out.png-17e5ba63745c2beda58ab36cf8e7aa39.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt shotgun radius wo lines.png-395fc5c3d0e69d8562b57df80ce16e75.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt.png-e5e94f801c8194953768f1435aa04c40.s3tc.ctex
+.godot/imported/tabletop export2_tabletop felt_without lines.png-71e942a229a2707d316439130abf951e.s3tc.ctex
+.godot/imported/tabletop export6_beer can brighter metal.png-3d05ad8f09157326ddb2526ba9e4f4b2.s3tc.ctex
+.godot/imported/tabletop export6_beer can2 no text.png-7b885ea41ee127c18240ba50d9c91712.s3tc.ctex
+.godot/imported/tabletop export6_cig box front 2.png-2e7f6c40e6a684fddfe60fab3685dec6.s3tc.ctex
+.godot/imported/tabletop export6_cig box side2.png-3e66b8ebc4afd966181c5ea168993c5b.s3tc.ctex
+.godot/imported/tabletop export6_metal024 pump action painted normal.png-f4ab72299d369d350f81179e8bfc7ad7.s3tc.ctex
+.godot/imported/tabletop export6_metal024 pump action painted normal2.png-dc2a0a0de71895927badcf8adb468910.s3tc.ctex
+.godot/imported/tabletop export6_metal24 pump action painted.png-4e9a578671cbb758152f4956f371611d.s3tc.ctex
+.godot/imported/tabletop export6_metal24 pump action painted2.png-f13a933f527f0ab444d90565e15c251a.s3tc.ctex
+.godot/imported/tabletop export6_saw texture2.png-8af356436bc51822cbb74649ab76e81b.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt normal.png-65acbe0aec67e66bf030585c7de0c8fa.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt shotgun radius compartment2.png-4e168a466a3a521daac167928bdede8b.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt shotgun radius with lines greyed out flippeed.png-629743a85c52c244312729f15dec3c8f.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt shotgun radius with lines greyed out.png-7c3f7d75e8e0518e8b43e03a18781d2e.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt shotgun radius wo lines.png-3708c7ac4166f33f8c39baea4dee574d.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt.png-a18195af8bf50baf7a9e8ef1ee6cde5b.s3tc.ctex
+.godot/imported/tabletop export6_tabletop felt_without lines.png-55ad631806340a27deefb8aeff7a962b.s3tc.ctex
+.godot/imported/tabletop felt highres9.png-c9d2d01a6e89ede9be0779dd9de81df9.s3tc.ctex
+.godot/imported/tabletop health counter export1_tabletop felt normal.png-137bd122282ab1c61b73173c2db03505.s3tc.ctex
+.godot/imported/tabletop health counter export1_tabletop felt shell compartment.png-536da7081320f46cbc6893222b6dc9c3.s3tc.ctex
+.godot/imported/tabletop health counter export1_tabletop felt shotgun radius compartment2.png-f40bc2defd3ae8340e15fe81a575cb17.s3tc.ctex
+.godot/imported/tabletop health counter export1_tabletop felt shotgun radius with lines greyed out.png-f8c0521b4b70488c0751ef4a9bd074f8.s3tc.ctex
+.godot/imported/tabletop health counter export1_tabletop felt_without lines.png-417e9ef73d26e3edb49aef057d1bcee6.s3tc.ctex
+.godot/imported/tabletop inner circle plates1_tabletop main4.png-6b41f31ee92bd7bb047ba60ba2398ef7.s3tc.ctex
+.godot/imported/tabletop interior1_tabletop interior device.png-e4e2f0df640143a10d452918f74bb282.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt normal.png-af1ab78cd6c30b6fbf210ab42e90cbdf.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt shell compartment.png-0b95191c97c771f6ecabfcb0649e3511.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt shotgun radius compartment2.png-a81293c7bf481276112dc2ca7abca63d.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt shotgun radius with lines greyed out flippeed.png-68ad4f9dca48016d90d88f8a7d0928e9.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt shotgun radius with lines greyed out.png-2266ffa0626c448e9768069fb1cc456e.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt shotgun radius wo lines.png-f0ccacbed971903cc5b17dc9bb964ee8.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt.png-3796fd3dcc7b3d284b6324d8c2ec58d6.s3tc.ctex
+.godot/imported/tabletop standalone export2_tabletop felt_without lines.png-5b3008bb6bd35f5cd44d7f070127bdec.s3tc.ctex
+.godot/imported/temp mesh_main hand grabbing2_skin base hand_left.png-04a859a37184aa261124c0492d117030.s3tc.ctex
+.godot/imported/temp mesh_pinch1_skin base hand_left.png-89cfa5c437f06858831548811d7e7c27.s3tc.ctex
+.godot/imported/temp mesh_pinch2_skin base hand_left.png-4e446ebbf8492e5675278fa71550a4e7.s3tc.ctex
+.godot/imported/temp mesh_R_point1_skin base hand_left.png-6785e3a37788ce3e7a814d1e4ede44ac.s3tc.ctex
+.godot/imported/title_buckshot1.png-5d8e3e73ceec65ae1dca69af78e4c0b4.s3tc.ctex
+.godot/imported/vehicle backdrop1_wooden fence main.png-b4fa979e1b7b967b0ce3852bc7137053.s3tc.ctex
+.godot/imported/window mask overlay1.png-24f9f1e47e401a8fd29b27f5d6c7a9df.s3tc.ctex
+.godot/imported/window mask overlay2.png-0032c4f817a8fc1aa613c2a71dcc8231.s3tc.ctex
+.godot/imported/xanax label new1.png-51eda7d8dbb4f8db07909b09794623b6.s3tc.ctex

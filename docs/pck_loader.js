@@ -3,12 +3,15 @@
 
 	// Buckshot Roulette web port - main pack loader.
 	//
-	// Three packs ship side by side because GPU compressed-texture support
-	// differs:
-	//   pck/       - S3TC (BC1/BC3) textures - desktop browsers
-	//   pck-etc2/  - ETC2/EAC textures      - Apple GPUs etc. (mobile)
-	//   pck-rgba/  - uncompressed RGBA8/RGB8/RG8 - anything that can't
-	//                upload compressed textures at all
+	// Two packs are downloaded and mounted instead of one, which both keeps
+	// the GitHub Pages tree under its 1 GB limit and stops shipping the same
+	// non-texture content to every device:
+	//
+	//   base/               - project, scripts, scenes, audio (shared)
+	//   tex-s3tc/           - BC1/BC3 textures   - desktop browsers
+	//   tex-etc2/           - ETC2/EAC textures  - Apple GPUs etc. (mobile)
+	//   tex-rgba/           - RGB8/RGBA8/RG8     - anything that can't upload
+	//                         compressed textures at all
 	//
 	// The choice matters because Godot 4.1.4's GLES3 backend gates compressed
 	// uploads on GL extension names: S3TC only via WEBGL_compressed_texture_s3tc
@@ -19,16 +22,20 @@
 	// names (GL_KHR_texture_compression_astc_ldr...) that browsers never report,
 	// then has no software decoder to fall back on.
 	//
+	// The engine boots from base.pck ("--main-pack base.pck"); the overlay
+	// buffer is preloaded as res://tex.pck and mounted by the BootPack
+	// autoload with replace_files=true. (See tools/boot_pack.gd.)
+	//
 	// Chunks are stored in the browser's Cache API (per pack), so repeat
-	// visits assemble the pack at local speed with no re-download. Missing
+	// visits assemble the packs at local speed with no re-download. Missing
 	// chunks download in parallel (streamed, byte-accurate progress) and are
 	// placed directly into one preallocated ArrayBuffer, which is handed to
 	// Godot via preloadFile - no blob round-trip.
 	//
-	// The manifest carries an md5 version; a rebuilt pack invalidates the
-	// cached chunks automatically. A small on-screen badge reports which pack
-	// was picked and whether its upload test passed, so a device that renders
-	// blank textures is diagnosable without devtools.
+	// Each manifest carries an md5 version; a rebuilt pack invalidates its
+	// cached chunks automatically. A small on-screen badge reports which
+	// overlay was picked, so a device that renders blank textures is
+	// diagnosable without devtools.
 
 	var CONCURRENCY = 5;
 
@@ -68,22 +75,22 @@
 			uploadTest(0x9272, EAC_RG11_BLOCK, 4, 4);
 	}
 
-	function pickPackDir() {
+	function pickTexDir() {
 		var override = new URLSearchParams(window.location.search).get('pack');
 		if (override === 'etc2' || override === 's3tc' || override === 'rgba') {
-			return override === 'etc2' ? 'pck-etc2' : (override === 'rgba' ? 'pck-rgba' : 'pck');
+			return 'tex-' + override;
 		}
 		try {
 			var gl = gl2();
 			if (gl && (gl.getExtension('WEBGL_compressed_texture_s3tc') ||
 					gl.getExtension('WEBGL_compressed_texture_s3tc_srgb'))) {
-				return 'pck'; // desktop GPUs: BC1/BC3 in hardware
+				return 'tex-s3tc'; // desktop GPUs: BC1/BC3 in hardware
 			}
 		} catch (e) { /* fall through */ }
 		// Mobile/other: ETC2 if this browser actually accepts the uploads
 		// (Safari iOS 13.4+), otherwise uncompressed RGBA8 - which renders
 		// on every WebGL2 device, no extension required.
-		return etc2Works() ? 'pck-etc2' : 'pck-rgba';
+		return etc2Works() ? 'tex-etc2' : 'tex-rgba';
 	}
 
 	function showBadge(text) {
@@ -98,52 +105,23 @@
 		} catch (e) { /* cosmetic only */ }
 	}
 
-	window.loadPckChunks = function (onProgress) {
-		var dir = pickPackDir();
-		var cacheName = 'br-pck-' + dir;
-		var test = true;
-		if (dir === 'pck-etc2') {
-			test = etc2Works();
-			if (!test) {
-				// The upload probe rejected ETC2: do not ship a pack this
-				// browser cannot render. Uncompressed RGBA8 needs no
-				// extension and renders everywhere WebGL2 does.
-				console.warn('ETC2 upload test failed - falling back to pck-rgba');
-				dir = 'pck-rgba';
-				cacheName = 'br-pck-' + dir;
-				test = true; // rgba uploads are plain formats, no probe needed
-			}
-		}
-		showBadge('pack: ' + dir + ' | ' + (test ? 'upload ok' : 'upload FAILED'));
-		if (!test) {
-			console.error('Compressed texture upload test failed for ' + dir +
-				' - this browser will render blank textures.');
-		}
+	function fetchManifest(dir) {
 		return fetch(dir + '/manifest.json', { cache: 'no-store' })
 			.then(function (r) {
-				if (r.status === 404) throw { noChunks: true };
-				if (!r.ok) throw new Error('failed to load ' + dir + '/manifest.json (HTTP ' + r.status + ')');
+				if (!r.ok) {
+					throw new Error('failed to load ' + dir + '/manifest.json (HTTP ' + r.status + ')');
+				}
 				return r.json();
-			})
-			.catch(function (e) {
-				if (e && e.noChunks) return null;
-				throw e;
-			})
-			.then(function (manifest) {
-				if (!manifest) return 'godot.pck'; // no chunks: plain single file
-				return assemble(dir, cacheName, manifest, onProgress || function () {});
 			});
-	};
+	}
 
-	function assemble(dir, cacheName, manifest, onProgress) {
-		// Warm the wasm download while the pack loads (engine.init needs it).
-		fetch('godot.wasm').catch(function () {});
-
+	// Assembles one pack from its chunk manifest. `tick` receives no data;
+	// the caller owns the shared (loaded, total) counters.
+	window.__assemblePck = function (dir, cacheName, manifest, tick) {
 		var total = manifest.size || 0;
 		var partSizes = manifest.partSizes || [];
 		var loaded = 0;
-		function tick() { onProgress(loaded, total); }
-		tick();
+		var onTick = function (d) { tick(d, total); };
 
 		// One contiguous buffer; each worker writes only its own slice.
 		var out = new Uint8Array(total);
@@ -165,7 +143,7 @@
 					out.set(new Uint8Array(buf), sumBefore(i));
 					loaded += buf.byteLength;
 					done[i] = 1;
-					tick();
+					onTick(buf.byteLength);
 					if (state.cache) {
 						state.cache.put(manifest.parts[i], new Response(buf)).catch(function () {});
 					}
@@ -197,17 +175,15 @@
 					return fetch(name).then(function (r) {
 						if (!r.ok) throw new Error('failed to fetch ' + name + ' (HTTP ' + r.status + ')');
 						if (!r.body) return r.arrayBuffer();
-						// stream: byte-accurate progress
+						// stream into one buffer; storePart owns the progress ticks
 						var reader = r.body.getReader();
-						var chunks = [];
 						var received = 0;
+						var chunks = [];
 						function pump() {
 							return reader.read().then(function (res) {
 								if (res.done) return;
 								chunks.push(res.value);
 								received += res.value.length;
-								loaded += res.value.length;
-								tick();
 								return pump();
 							});
 						}
@@ -247,7 +223,40 @@
 				});
 			});
 		});
-	}
+	};
+
+	window.loadPckChunks = function (onProgress) {
+		var tex = pickTexDir();
+		if (tex === 'tex-etc2' && !etc2Works()) {
+			// The upload probe rejected ETC2: do not ship a pack this
+			// browser cannot render. Uncompressed RGBA8 needs no extension
+			// and renders everywhere WebGL2 does.
+			console.warn('ETC2 upload test failed - falling back to tex-rgba');
+			tex = 'tex-rgba';
+		}
+		var label = tex.replace('tex-', '');
+		var always = function () { /* cosmetic */ };
+		showBadge('pack: base+' + label + ' | probe ' + (tex === 'tex-rgba' ? 'n/a' : 'ok'));
+
+		var loaded = 0;
+		var total = 0;
+		var progress = onProgress || function () {};
+		function tick(delta) {
+			loaded += delta;
+			if (total > 0) progress(loaded, total);
+		}
+		// Warm the wasm download while the packs load (engine.init needs it).
+		fetch('godot.wasm').catch(always);
+
+		return Promise.all([fetchManifest('base'), fetchManifest(tex)]).then(function (ms) {
+			total = ms[0].size + ms[1].size;
+			return window.__assemblePck('base', 'br-pck-base', ms[0], tick).then(function (baseBuf) {
+				return window.__assemblePck(tex, 'br-pck-' + tex, ms[1], tick).then(function (texBuf) {
+					return { base: baseBuf, tex: texBuf };
+				});
+			});
+		});
+	};
 
 	function cacheState(cache, dir, cacheName, manifest) {
 		if (!cache) return Promise.resolve({ cache: null, have: [] });

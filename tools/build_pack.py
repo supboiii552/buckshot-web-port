@@ -64,13 +64,24 @@ def main():
     ap.add_argument("--src", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--skip-exts", default="")
+    ap.add_argument("--skip-from", default="",
+                    help="text file with one pack-relative path per line: "
+                         "those exact files are excluded from the pack")
     ap.add_argument("--align", type=int, default=16)
     ap.add_argument("--pad-mb", type=float, default=0.0,
                     help="append a dummy res://__pad.bin of this size (memory-ceiling tests)")
     args = ap.parse_args()
 
     skip = {e.strip().lower() for e in args.skip_exts.split(",") if e.strip()}
+    skip_from = set()
+    if args.skip_from:
+        with open(args.skip_from, encoding="utf-8") as sf:
+            skip_from = {line.strip().replace("\\", "/") for line in sf
+                         if line.strip()}
+        print(f"--skip-from: excluding {len(skip_from)} paths")
     files = collect(args.src, skip)
+    files = [(rel, full) for rel, full in files
+             if rel.replace(os.sep, "/") not in skip_from]
     pad_bytes = int(args.pad_mb * 1_000_000)
     if pad_bytes:
         pad_path = os.path.join(os.path.dirname(os.path.abspath(args.out)), "__pad.bin")
