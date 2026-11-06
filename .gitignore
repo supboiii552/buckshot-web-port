@@ -2,9 +2,9 @@
 game_data/
 build/
 template/
-entries.json
-manifest.json
-project_settings.txt
+/entries.json
+/manifest.json
+/project_settings.txt
 
 # Local artifacts
 diag/
