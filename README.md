@@ -30,11 +30,15 @@ affiliated with or endorsed by Mike Klubnika / Critical Reflex.
   desktop game uses Forward+ (Vulkan) — expect minor lighting/shading
   differences.
 - Two packs ship because GPU texture support differs: `docs/pck/` (S3TC/BC
-  textures) for desktop browsers and `docs/pck-astc/` (ASTC textures) for
-  Apple/mobile browsers — Apple GPUs cannot decode S3TC at all, which is why
-  textures were black on iPad. The loader picks by probing WebGL2 extensions
-  (`?pack=astc|s3tc` overrides).
-- First visit downloads ~360–375 MB (packs are split into <100 MB chunks for
+  textures) for desktop browsers and `docs/pck-etc2/` (ETC2/EAC textures) for
+  Apple/mobile browsers. Apple GPUs cannot decode S3TC at all, and Godot
+  4.1.4's GLES3 config never enables ASTC on web (it only checks GL-style
+  extension names browsers never report) — ETC2 is the one mobile format the
+  engine uploads unconditionally on web and iOS Safari accepts since 13.4
+  (software decode). The loader probes WebGL2 extensions and runs an upload
+  self-test; a small badge in the page corner reports the chosen pack and
+  whether its upload test passed (`?pack=etc2|s3tc` overrides).
+- First visit downloads ~370–455 MB (packs are split into <100 MB chunks for
   GitHub and reassembled in the browser) and then caches the chunks in the
   browser: every later visit boots from local cache with no re-download. A
   rebuilt pack auto-invalidates the cache.
@@ -69,10 +73,8 @@ but fail silently in browsers (untextured/black objects). The tool also
 preserves BC1a (DXT1 1-bit alpha) cutouts and keeps player-read documents
 (the waiver) at full resolution.
 
-The mobile texture set is built with `tools/make_astc.py`, which needs ARM's
-astcenc: download the Windows x64 release from
-https://github.com/ARM-software/astc-encoder/releases and unpack it to
-`tools/astcenc/` (expects `bin/astcenc-avx2.exe`).
+The mobile texture set is built with `tools/make_etc2.py`, which needs the
+`etcpak` Python package (`pip install etcpak`, ships prebuilt wheels).
 
 ## Run locally
 

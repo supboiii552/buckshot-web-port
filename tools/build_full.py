@@ -30,6 +30,7 @@ ROOT = r"C:\Users\eight\Downloads\Buckshot Roulette_windows\webport\game_data"
 OUT = r"C:\Users\eight\Downloads\Buckshot Roulette_windows\webport\build\full"
 ASSETS = r"C:\Users\eight\Downloads\Buckshot Roulette_windows\webport\build\assets"
 ASSETS_ASTC = r"C:\Users\eight\Downloads\Buckshot Roulette_windows\webport\build\assets-astc"
+ASSETS_ETC2 = r"C:\Users\eight\Downloads\Buckshot Roulette_windows\webport\build\assets-etc2"
 
 STEAMWEB_GD = r'''extends Node
 
@@ -280,15 +281,17 @@ def compress_resources(out):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--textures", choices=["s3tc", "astc"], default="s3tc",
+    ap.add_argument("--textures", choices=["s3tc", "etc2", "astc"], default="s3tc",
                     help="texture overlay: 's3tc' for desktop browsers, "
-                         "'astc' for Apple/mobile browsers (iOS Safari cannot "
-                         "decode S3TC)")
+                         "'etc2' for Apple/mobile browsers (ETC2 is the only "
+                         "mobile format Godot 4.1.4 web attempts natively; "
+                         "'astc' kept but dead - the GLES3 config never "
+                         "enables ASTC on web)")
     ap.add_argument("--out", default=OUT,
                     help="output tree directory (use build/full-astc for the "
                          "astc texture set)")
     args = ap.parse_args()
-    assets = ASSETS if args.textures == "s3tc" else ASSETS_ASTC
+    assets = {"s3tc": ASSETS, "etc2": ASSETS_ETC2, "astc": ASSETS_ASTC}[args.textures]
     out = args.out
 
     # 1. full copy of the extracted PCK content

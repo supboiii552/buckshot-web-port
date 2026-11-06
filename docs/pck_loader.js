@@ -4,47 +4,101 @@
 	// Buckshot Roulette web port - main pack loader.
 	//
 	// Two packs ship side by side because GPU compressed-texture support
-	// differs: desktop GPUs decode S3TC (BC1/BC3) but Apple GPUs (iPhone/iPad)
-	// cannot, while Apple hardware decodes ASTC natively. The loader probes
-	// WebGL2 extensions on a throwaway canvas and picks:
-	//   pck/       - S3TC textures  (desktop browsers)
-	//   pck-astc/  - ASTC textures  (iOS Safari / Apple GPUs)
+	// differs:
+	//   pck/       - S3TC (BC1/BC3) textures - desktop browsers
+	//   pck-etc2/  - ETC2/EAC textures      - everyone else (Apple GPUs etc.)
+	//
+	// The choice matters because Godot 4.1.4's GLES3 backend gates compressed
+	// uploads on GL extension names: S3TC only via WEBGL_compressed_texture_s3tc
+	// (desktop Chrome/Firefox have it, Safari does not), ETC2 unconditionally
+	// (config.cpp hardcodes etc2_supported=true on GLES builds; iOS Safari
+	// accepts ETC2 since 13.4 via WEBGL_compressed_texture_etc). ASTC would be
+	// rejected by this engine build on every browser - it checks only GL-style
+	// names (GL_KHR_texture_compression_astc_ldr...) that browsers never report,
+	// then has no software decoder to fall back on.
 	//
 	// Chunks are stored in the browser's Cache API (per pack), so repeat
 	// visits assemble the pack at local speed with no re-download. Missing
 	// chunks download in parallel (streamed, byte-accurate progress) and are
 	// placed directly into one preallocated ArrayBuffer, which is handed to
-	// Godot via preloadFile - no blob round-trip, one copy less.
+	// Godot via preloadFile - no blob round-trip.
 	//
 	// The manifest carries an md5 version; a rebuilt pack invalidates the
-	// cached chunks automatically.
+	// cached chunks automatically. A small on-screen badge reports which pack
+	// was picked and whether its upload test passed, so a device that renders
+	// blank textures is diagnosable without devtools.
 
 	var CONCURRENCY = 5;
 
+	function gl2() {
+		try {
+			return document.createElement('canvas').getContext('webgl2');
+		} catch (e) {
+			return null;
+		}
+	}
+
+	function uploadTest(internalFormat, block, w, h) {
+		var gl = gl2();
+		if (!gl) return false;
+		gl.getExtension('WEBGL_compressed_texture_etc');
+		gl.getExtension('WEBGL_compressed_texture_s3tc');
+		try {
+			var tex = gl.createTexture();
+			gl.bindTexture(gl.TEXTURE_2D, tex);
+			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+			gl.compressedTexImage2D(gl.TEXTURE_2D, 0, internalFormat, w, h, 0, block);
+			return gl.getError() === 0;
+		} catch (e) {
+			return false;
+		}
+	}
+
+	// One valid ETC2 RGB8 block (4x4) and one EAC RG11 block pair (4x4).
+	var ETC2_RGB8_BLOCK = new Uint8Array([0x80, 0x81, 0x04, 0x0a, 0x01, 0x00, 0x02, 0x20]);
+	var EAC_RG11_BLOCK = new Uint8Array([
+		0x06, 0x11, 0x24, 0x90, 0x00, 0x92, 0x4b, 0x6d,
+		0x06, 0x11, 0x22, 0x52, 0x25, 0x22, 0x52, 0x25]);
+
 	function pickPackDir() {
 		var override = new URLSearchParams(window.location.search).get('pack');
-		if (override === 's3tc' || override === 'astc') {
-			return override === 'astc' ? 'pck-astc' : 'pck';
+		if (override === 'etc2' || override === 's3tc') {
+			return override === 'etc2' ? 'pck-etc2' : 'pck';
 		}
 		try {
-			var probe = document.createElement('canvas');
-			var gl = probe.getContext('webgl2');
-			if (gl) {
-				if (gl.getExtension('WEBGL_compressed_texture_s3tc') ||
-					gl.getExtension('WEBGL_compressed_texture_s3tc_srgb')) {
-					return 'pck'; // desktop GPUs: BC1/BC3
-				}
-				if (gl.getExtension('WEBGL_compressed_texture_astc')) {
-					return 'pck-astc'; // Apple/mobile GPUs: ASTC
-				}
+			var gl = gl2();
+			if (gl && (gl.getExtension('WEBGL_compressed_texture_s3tc') ||
+					gl.getExtension('WEBGL_compressed_texture_s3tc_srgb'))) {
+				return 'pck'; // desktop GPUs: BC1/BC3 in hardware
 			}
 		} catch (e) { /* fall through */ }
-		return 'pck'; // safest default
+		return 'pck-etc2'; // Apple/mobile GPUs: ETC2 (Safari iOS 13.4+)
+	}
+
+	function showBadge(text) {
+		try {
+			var b = document.createElement('div');
+			b.id = 'pack-badge';
+			b.style.cssText = 'position:fixed;right:4px;bottom:4px;z-index:2147483647;' +
+				'color:#fff;background:rgba(0,0,0,0.5);font:10px/1.25 monospace;' +
+				'padding:2px 5px;border-radius:3px;pointer-events:none;opacity:0.85';
+			b.textContent = text;
+			(document.body || document.documentElement).appendChild(b);
+		} catch (e) { /* cosmetic only */ }
 	}
 
 	window.loadPckChunks = function (onProgress) {
 		var dir = pickPackDir();
 		var cacheName = 'br-pck-' + dir;
+		var test = (dir === 'pck-etc2')
+			? uploadTest(0x9274, ETC2_RGB8_BLOCK, 4, 4) && uploadTest(0x9272, EAC_RG11_BLOCK, 4, 4)
+			: true;
+		showBadge('pack: ' + dir + ' | ' + (test ? 'upload ok' : 'upload FAILED'));
+		if (!test) {
+			console.error('Compressed texture upload test failed for ' + dir +
+				' - this browser will render blank textures.');
+		}
 		return fetch(dir + '/manifest.json', { cache: 'no-store' })
 			.then(function (r) {
 				if (r.status === 404) throw { noChunks: true };
